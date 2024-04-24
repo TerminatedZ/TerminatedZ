@@ -81,6 +81,14 @@ potionsTab:AddButton({
 
 local game = game.Workspace
 
+farmTab:AddToggle({
+	Name = "Auto Collect Money",
+	Default = false,
+	Callback = function(Value)
+		waitAndTeleportMoney()
+	end    
+})
+
 
 teleportTab:AddButton({
 	Name = "Restaurant",
@@ -117,13 +125,7 @@ teleportTab:AddButton({
   	end    
 })
 
-farmTab:AddToggle({
-	Name = "Auto Collect Money",
-	Default = false,
-	Callback = function(Value)
-		autoMoney(Value)
-	end    
-})
+
 
 --[[
 Name = <string> - The name of the toggle.
@@ -190,91 +192,91 @@ local Section = teleportTab:AddSection({
 teleportTab:AddButton({
 	Name = "Bring All Steak",
 	Callback = function()
-		    collectSteaks()
+	    collectSteaks()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Cheese",
 	Callback = function()
-		    collectCheese()
+		collectCheese()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Salad",
 	Callback = function()
-		    collectSalads()
+		collectSalads()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Top Buns",
 	Callback = function()
-		    collectTopBuns()
+		collectTopBuns()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Plates",
 	Callback = function()
-		    collectPlates()
+		collectPlates()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Bottom Buns",
 	Callback = function()
-		    collectBottomBuns()
+		collectBottomBuns()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Fries",
 	Callback = function()
-		    collectAllPartsFromFries()
+		collectAllPartsFromFries()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Mustard",
 	Callback = function()
-		    collectMustards()
+		collectMustards()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Ketchup",
 	Callback = function()
-		    collectKetchups()
+		collectKetchups()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring Microwave",
 	Callback = function()
-		    collectMicrowaveParts()
+		collectMicrowaveParts()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Potions",
 	Callback = function()
-		    collectAllPartsFromPotions()
+		collectAllPartsFromPotions()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Bells",
 	Callback = function()
-		    collectBellParts()
+		collectBellParts()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Cats",
 	Callback = function()
-		    collectCatParts()
+		collectCatParts()
   	end    
 })
 
@@ -282,14 +284,14 @@ teleportTab:AddButton({
 teleportTab:AddButton({
 	Name = "Bring All Rats",
 	Callback = function()
-		    collectRatParts()
+		collectRatParts()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Seagulls",
 	Callback = function()
-		    collectCatParts()
+		collectCatParts()
   	end    
 })
 
@@ -736,45 +738,44 @@ local function collectTopBuns()
  
   
 
-  local function autoMoney() -- Function name changed to reflect its purpose
+  local args = {
+    [1] = workspace.Entities.Items.Money
+}
 
-    -- Continuously check for money with error handling
-    local waitTime = 0.3 -- Adjust wait time in seconds
-  
-    while true do  -- Loop continuously
-      local success, money = pcall(function()
-        return workspace.Entities.Items.Money
-      end)
-  
-      if success then
-        checkForMoney(money) -- Call the checkForMoney function
-      else
-        print("Error finding money:", success) -- Print error message for debugging
-      end
-  
-      wait(waitTime) -- Wait before checking again
-    end
-  
-    print("Auto money script stopped.") -- Informative message
-  end
-  
-  -- Function to check for money
-  local function checkForMoney(money)
-    if money then
-      money.CFrame = CFrame.new(-62, 86, -337) -- Teleport money
-      print("Teleported money!")
-  
-      -- Trigger server-side functionality using args (modify if needed)
-      local args = {
-        [1] = workspace.Entities.Items.Money
-      }
-      game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
-    else
-      print("No money found, waiting...")
-    end
-  
-  -- Call the function (uncomment if desired)
-  -- autoMoney()
+
+local function waitAndTeleportMoney() -- Descriptive function name
+local function checkForMoney()
+local moneyPart = workspace.Entities.Items:FindFirstChild("Money") -- Find the Money part
+
+if moneyPart then
+  -- Teleport the Money part and print success message
+  moneyPart.CFrame = CFrame.new(-62, 86, -337)
+  print("Teleported Money part!")
+
+  -- Server-side call with `wait` (guaranteed execution)
+    local args = {
+    [1] = workspace.Entities.Items.Money
+}
+
+  game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
+  wait() -- Wait for the InvokeServer to finish (might be unnecessary)
+
+else
+  -- Error handling and wait
+  print("Money part not found, waiting...")
+  wait(1)
+end
+
+-- Loop back to check again (modify wait time if needed)
+wait(1) -- Adjust wait time between checks (optional)
+checkForMoney() -- Call itself recursively to keep checking
+end
+
+checkForMoney() -- Start the initial check for money
+end
+
+-- Call the function (replace with your desired trigger event)  -- Uncomment to run the script automatically
+
   
 
 
