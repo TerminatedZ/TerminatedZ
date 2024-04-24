@@ -671,24 +671,6 @@ local function collectTopBuns()
   
 
 
-  local function collectBottomBuns() -- Renamed function to plural for clarity
-    local bottomBuns = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
-    local bottomBunCount = 0 -- Counter to track collected Bottom Buns
-  
-    for _, bottomBun in ipairs(bottomBuns) do -- Loop through each child
-      if bottomBun:IsA("BasePart") and bottomBun.Name == "Bottom Bun" then -- Check if it's a BasePart named Bottom Bun
-        local bottomBunCFrame = bottomBun.CFrame -- Get the current Bottom Bun's CFrame
-        bottomBun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-        bottomBunCount = bottomBunCount + 1 -- Increment collected Bottom Bun count
-      end
-    end
-  
-    if bottomBunCount > 0 then
-      print("Collected", bottomBunCount, "Bottom Buns!") -- Print collected amount (if any)
-    else
-      print("No Bottom Buns found!")
-    end
-  end
 
   
   
@@ -787,7 +769,24 @@ local function collectTopBuns()
 
 
 
-
+  local function collectBottomBuns() -- Renamed function to plural for clarity
+    local bottomBuns = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
+    local bottomBunCount = 0 -- Counter to track collected Bottom Buns
+  
+    for _, bottomBun in ipairs(bottomBuns) do -- Loop through each child
+      if bottomBun:IsA("BasePart") and bottomBun.Name == "Bottom Bun" then -- Check if it's a BasePart named Bottom Bun
+        local bottomBunCFrame = bottomBun.CFrame -- Get the current Bottom Bun's CFrame
+        bottomBun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+        bottomBunCount = bottomBunCount + 1 -- Increment collected Bottom Bun count
+      end
+    end
+  
+    if bottomBunCount > 0 then
+      print("Collected", bottomBunCount, "Bottom Buns!") -- Print collected amount (if any)
+    else
+      print("No Bottom Buns found!")
+    end
+  end
  
   
 
