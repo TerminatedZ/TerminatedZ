@@ -1,0 +1,23 @@
+local function collectExtinguisherParts() -- Descriptive function name
+    -- Target location for Extinguisher models
+    local extinguisherLocation = game.Workspace.Entities.Items
+  
+    -- Find the Extinguisher models
+    local extinguishers = extinguisherLocation:GetChildren() -- Get all children of Items folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, extinguisher in ipairs(extinguishers) do
+      if extinguisher:IsA("Model") and extinguisher.Name == "Extinguisher" then -- Check if it's a Model named Extinguisher
+        -- Get all immediate children of the Extinguisher model (potential parts)
+        local extinguisherParts = extinguisher:GetChildren()
+    
+        for _, part in ipairs(extinguisherParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+collectExtinguisherParts()
