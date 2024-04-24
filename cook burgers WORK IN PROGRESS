@@ -546,6 +546,84 @@ teleportTab:AddButton({
   	end    
 })
 
+local function collectSalads()  -- Renamed function to plural for clarity
+    local salads = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local saladCount = 0  -- Counter to track collected Salads
+  
+    for _, salad in ipairs(salads) do  -- Loop through each child
+      if salad.Name == "Salad" then  -- Check if it's a Salad part
+        saladCFrame = salad.CFrame  -- Get the current Salad's CFrame
+        salad.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        saladCount = saladCount + 1  -- Increment collected Salad count
+      end
+    end
+    
+    if saladCount > 0 then
+      print("Collected", saladCount, "Salads!")  -- Print collected amount (if any)
+    else
+      print("e")
+    end
+end
+
+local function collectMustards() -- Renamed function to plural for clarity
+    local mustards = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
+    local mustardCount = 0 -- Counter to track collected Mustards
+  
+    for _, mustard in ipairs(mustards) do -- Loop through each child
+      if mustard.Name == "Mustard" then -- Check if it's a Mustard part
+        local mustardCFrame = mustard.CFrame -- Get the current Mustard's CFrame
+        mustard.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+        mustardCount = mustardCount + 1 -- Increment collected Mustard count
+      end
+    end
+end
+
+local function collectKetchups() -- Renamed function to plural for clarity
+    local ketchups = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
+    local ketchupCount = 0 -- Counter to track collected Ketchups
+  
+    for _, ketchup in ipairs(ketchups) do -- Loop through each child of Items folder
+      if ketchup:IsA("BasePart") and ketchup.Name == "Ketchup" then -- Check if it's a BasePart named Ketchup
+        local ketchupCFrame = ketchup.CFrame -- Get the current Ketchup's CFrame
+        ketchup.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+        ketchupCount = ketchupCount + 1 -- Increment collected Ketchup count
+      end
+    end
+  
+    if ketchupCount > 0 then
+      print("Collected", ketchupCount, "Ketchups!") -- Print collected amount (if any)
+    else
+      print("No Ketchups found!")
+    end
+  end
+
+  local function collectAllPartsFromPotions()
+    -- Get all children of the Items folder
+    local potions = game.Workspace.Entities.Items:GetChildren()
+    local partCount = 0
+  
+    for _, potion in ipairs(potions) do
+      if potion.Name == "Potion" then
+        -- Get all immediate children of the Potion
+        local potionParts = potion:GetChildren()
+        
+        for _, part in ipairs(potionParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            partCount = partCount + 1
+          end
+        end
+      end
+    end
+  
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Potions!")
+    else
+      print("No Parts found inside Potions!")
+    end
+  end
+
 teleportTab:AddButton({
 	Name = "Bakery",
 	Callback = function()
@@ -728,83 +806,7 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
-local function collectSalads()  -- Renamed function to plural for clarity
-    local salads = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
-    local saladCount = 0  -- Counter to track collected Salads
-  
-    for _, salad in ipairs(salads) do  -- Loop through each child
-      if salad.Name == "Salad" then  -- Check if it's a Salad part
-        saladCFrame = salad.CFrame  -- Get the current Salad's CFrame
-        salad.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
-        saladCount = saladCount + 1  -- Increment collected Salad count
-      end
-    end
-    
-    if saladCount > 0 then
-      print("Collected", saladCount, "Salads!")  -- Print collected amount (if any)
-    else
-      print("e")
-    end
-end
 
-local function collectMustards() -- Renamed function to plural for clarity
-    local mustards = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
-    local mustardCount = 0 -- Counter to track collected Mustards
-  
-    for _, mustard in ipairs(mustards) do -- Loop through each child
-      if mustard.Name == "Mustard" then -- Check if it's a Mustard part
-        local mustardCFrame = mustard.CFrame -- Get the current Mustard's CFrame
-        mustard.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-        mustardCount = mustardCount + 1 -- Increment collected Mustard count
-      end
-    end
-end
-
-local function collectKetchups() -- Renamed function to plural for clarity
-    local ketchups = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
-    local ketchupCount = 0 -- Counter to track collected Ketchups
-  
-    for _, ketchup in ipairs(ketchups) do -- Loop through each child of Items folder
-      if ketchup:IsA("BasePart") and ketchup.Name == "Ketchup" then -- Check if it's a BasePart named Ketchup
-        local ketchupCFrame = ketchup.CFrame -- Get the current Ketchup's CFrame
-        ketchup.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-        ketchupCount = ketchupCount + 1 -- Increment collected Ketchup count
-      end
-    end
-  
-    if ketchupCount > 0 then
-      print("Collected", ketchupCount, "Ketchups!") -- Print collected amount (if any)
-    else
-      print("No Ketchups found!")
-    end
-  end
-
-  local function collectAllPartsFromPotions()
-    -- Get all children of the Items folder
-    local potions = game.Workspace.Entities.Items:GetChildren()
-    local partCount = 0
-  
-    for _, potion in ipairs(potions) do
-      if potion.Name == "Potion" then
-        -- Get all immediate children of the Potion
-        local potionParts = potion:GetChildren()
-        
-        for _, part in ipairs(potionParts) do
-          if part:IsA("BasePart") then -- Check if it's a valid part
-            local partCFrame = part.CFrame
-            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-            partCount = partCount + 1
-          end
-        end
-      end
-    end
-  
-    if partCount > 0 then
-      print("Collected", partCount, "Parts from Potions!")
-    else
-      print("No Parts found inside Potions!")
-    end
-  end
 
  
   
