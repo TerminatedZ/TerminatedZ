@@ -1,3 +1,8 @@
+		local args = {
+    	[1] = workspace.Entities.Items.Money
+	}
+
+
 local function waitAndTeleportMoney() -- Descriptive function name
   local function checkForMoney()
     local moneyPart = workspace.Entities.Items:FindFirstChild("Money") -- Find the Money part
@@ -7,18 +12,21 @@ local function waitAndTeleportMoney() -- Descriptive function name
       moneyPart.CFrame = CFrame.new(-62, 86, -337)
       print("Teleported Money part!")
 
-      -- Trigger server-side functionality without arguments
+      -- Trigger server-side functionality without arguments (modify if needed)
       game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer()
     else
       -- Error handling and wait
       print("Money part not found, waiting...")
       wait(1)
-      checkForMoney() -- Call itself recursively
     end
+
+    -- Loop back to check again (modify wait time if needed)
+    wait(1) -- Adjust wait time between checks (optional)
+    checkForMoney() -- Call itself recursively to keep checking
   end
 
   checkForMoney() -- Start the initial check for money
 end
 
 -- Call the function (replace with your desired trigger event)
-waitAndTeleportMoney()  -- Uncomment to run the script
+waitAndTeleportMoney()  -- Uncomment to run the script automatically
