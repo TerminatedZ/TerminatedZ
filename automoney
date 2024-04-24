@@ -12,8 +12,14 @@ local function waitAndTeleportMoney() -- Descriptive function name
       moneyPart.CFrame = CFrame.new(-62, 86, -337)
       print("Teleported Money part!")
 
-      -- Trigger server-side functionality without arguments (modify if needed)
+      -- Server-side call with `wait` (guaranteed execution)
+		local args = {
+    	[1] = workspace.Entities.Items.Money
+	}
+
       game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
+      wait() -- Wait for the InvokeServer to finish (might be unnecessary)
+
     else
       -- Error handling and wait
       print("Money part not found, waiting...")
@@ -30,3 +36,4 @@ end
 
 -- Call the function (replace with your desired trigger event)
 waitAndTeleportMoney()  -- Uncomment to run the script automatically
+
