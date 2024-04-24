@@ -475,78 +475,9 @@ local function collectBellParts() -- Descriptive function name
     end
   end
 
--- Buttons
-
-potionsTab:AddButton({
-	Name = "Green Potion (RAT)",
-	Callback = function()
-      	workspace.Entities.Items.Potion.ContextAction:FireServer()
-  	end    
-})
 
 
-potionsTab:AddButton({
-	Name = "Purple Potion (CAT)",
-	Callback = function()
-		workspace.Entities.Items.CatPotion.ContextAction:FireServer()
-  	end    
-})
-
-
-
-potionsTab:AddButton({
-	Name = "Orange Potion (SPECIAL RAT)",
-	Callback = function()
-		workspace.Entities.Items.OrangePotion.ContextAction:FireServer()
-  	end    
-})
-
-local game = game.Workspace
-
-
-teleportTab:AddButton({
-	Name = "Restaurant",
-	Callback = function()
-		Player.CFrame = CFrame.new(-25, 85, -270)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Kitchen",
-	Callback = function()
-		Player.CFrame = CFrame.new(-38, 86, -362)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Sewers",
-	Callback = function()
-		Player.CFrame = CFrame.new(57, 70, -901)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Potion Room",
-	Callback = function()
-		Player.CFrame = CFrame.new(-36, 66, -844)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Supermarket",
-	Callback = function()
-		Player.CFrame = CFrame.new(114, 86, -177)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Secret Room Supermarket",
-	Callback = function()
-		Player.CFrame = CFrame.new(114, 86, -117)
-  	end    
-})
-
-local function collectSalads()  -- Renamed function to plural for clarity
+  local function collectSalads()  -- Renamed function to plural for clarity
     local salads = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
     local saladCount = 0  -- Counter to track collected Salads
   
@@ -623,6 +554,79 @@ local function collectKetchups() -- Renamed function to plural for clarity
       print("No Parts found inside Potions!")
     end
   end
+  
+-- Buttons
+
+potionsTab:AddButton({
+	Name = "Green Potion (RAT)",
+	Callback = function()
+      	workspace.Entities.Items.Potion.ContextAction:FireServer()
+  	end    
+})
+
+
+potionsTab:AddButton({
+	Name = "Purple Potion (CAT)",
+	Callback = function()
+		workspace.Entities.Items.CatPotion.ContextAction:FireServer()
+  	end    
+})
+
+
+
+potionsTab:AddButton({
+	Name = "Orange Potion (SPECIAL RAT)",
+	Callback = function()
+		workspace.Entities.Items.OrangePotion.ContextAction:FireServer()
+  	end    
+})
+
+local game = game.Workspace
+
+
+teleportTab:AddButton({
+	Name = "Restaurant",
+	Callback = function()
+		Player.CFrame = CFrame.new(-25, 85, -270)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Kitchen",
+	Callback = function()
+		Player.CFrame = CFrame.new(-38, 86, -362)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Sewers",
+	Callback = function()
+		Player.CFrame = CFrame.new(57, 70, -901)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Potion Room",
+	Callback = function()
+		Player.CFrame = CFrame.new(-36, 66, -844)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -177)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Room Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -117)
+  	end    
+})
+
+
 
 teleportTab:AddButton({
 	Name = "Bakery",
