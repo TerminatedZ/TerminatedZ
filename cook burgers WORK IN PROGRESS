@@ -284,12 +284,6 @@ teleportTab:AddButton({
   	end    
 })
 
-teleportTab:AddButton({
-	Name = "Bring All Extinguishers",
-	Callback = function()
-		collectExtinguisherParts()
-  	end    
-})
 
 
 
