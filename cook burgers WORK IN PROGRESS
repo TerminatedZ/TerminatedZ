@@ -117,6 +117,14 @@ teleportTab:AddButton({
   	end    
 })
 
+farmTab:AddButton({
+	Name = "Auto Pickup Money",
+	Callback = function()
+      		autoMoney()
+  	end    
+})
+
+
 teleportTab:AddButton({
 	Name = "Secret Room Supermarket",
 	Callback = function()
@@ -289,12 +297,7 @@ teleportTab:AddButton({
 
 -- Toggles
 
-Tab:AddButton({
-	Name = "Auto Pickup Money",
-	Callback = function()
-      		autoMoney()
-  	end    
-})
+
 
 OrionLib:MakeNotification({
 	Name = "Script!",
