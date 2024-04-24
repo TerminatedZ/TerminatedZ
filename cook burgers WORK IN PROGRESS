@@ -129,178 +129,14 @@ local function collectTopBuns()
       print("No Bottom Buns found!")
     end
   end
-  
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
-  
-
-  local function collectBellParts() -- Descriptive function name
-    -- Target location for Bell models
-    local bellLocation = game.Workspace.Entities.Items
-  
-    -- Find the Bell models
-    local bells = bellLocation:GetChildren() -- Get all children of Items folder
-    local partCount = 0 -- Counter to track collected parts
-  
-    for _, bell in ipairs(bells) do
-      if bell:IsA("Model") and bell.Name == "Bell" then -- Check if it's a Model named Bell
-        -- Get all immediate children of the Bell model (potential parts)
-        local bellParts = bell:GetChildren()
-    
-        for _, part in ipairs(bellParts) do
-          if part:IsA("BasePart") then -- Check if it's a valid part
-            local partCFrame = part.CFrame -- Get the current part's CFrame
-            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-            partCount = partCount + 1 -- Increment collected part count
-          end
-        end
-      end
-    end
-    
-    if partCount > 0 then
-      print("Collected", partCount, "Parts from Bells!") -- Print collected amount (if any)
-    else
-      print("No Parts found inside Bells!")
-    end
-  end
-  
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
- 
-
-
-  local function collectCatParts() -- Descriptive function name
-    -- Target location for Cat models (modify the path if needed)
-    local catLocation = game.Workspace.Entities.Characters.Creatures.Cats 
-  
-    -- Find the Cat models
-    local cats = catLocation:GetChildren() -- Get all children of Cats folder
-    local partCount = 0 -- Counter to track collected parts
-  
-    for _, cat in ipairs(cats) do
-      if cat:IsA("Model") and cat.Name == "Cat" then -- Check if it's a Model named Cat
-        -- Get all immediate children of the Cat model (potential parts)
-        local catParts = cat:GetChildren()
-    
-        for _, part in ipairs(catParts) do
-          if part:IsA("BasePart") then -- Check if it's a valid part
-            local partCFrame = part.CFrame -- Get the current part's CFrame
-            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-            partCount = partCount + 1 -- Increment collected part count
-          end
-        end
-      end
-    end
-    
-    if partCount > 0 then
-      print("Collected", partCount, "Parts from Cats!") -- Print collected amount (if any)
-    else
-      print("No Parts found inside Cats!")
-    end
-  end
-  
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
-
-
-  local function collectRatParts() -- Descriptive function name
-    -- Target location for Rat models
-    local ratLocation = game.Workspace.Entities.Characters.Creatures.Rats
-  
-    -- Find the Rat models
-    local rats = ratLocation:GetChildren() -- Get all children of Rats folder
-    local partCount = 0 -- Counter to track collected parts
-  
-    for _, rat in ipairs(rats) do
-      if rat:IsA("Model") and rat.Name == "Rat" then -- Check if it's a Model named Rat
-        -- Get all immediate children of the Rat model (potential parts)
-        local ratParts = rat:GetChildren()
-    
-        for _, part in ipairs(ratParts) do
-          if part:IsA("BasePart") then -- Check if it's a valid part
-            local partCFrame = part.CFrame -- Get the current part's CFrame
-            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-            partCount = partCount + 1 -- Increment collected part count
-          end
-        end
-      end
-    end
-    
-    if partCount > 0 then
-      print("Collected", partCount, "Parts from Rats!") -- Print collected amount (if any)
-    else
-      print("No Parts found inside Rats!")
-    end
-  end
-  
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
 
   
-  local function collectSeagullParts() -- Descriptive function name
-    -- Target location for Seagull models
-    local seagullLocation = game.Workspace.Entities.Characters.Creatures.Seagulls
-  
-    -- Find the Seagull models
-    local seagulls = seagullLocation:GetChildren() -- Get all children of Seagulls folder
-    local partCount = 0 -- Counter to track collected parts
-  
-    for _, seagull in ipairs(seagulls) do
-      if seagull:IsA("Model") and seagull.Name == "Seagull" then -- Check if it's a Model named Seagull
-        -- Get all immediate children of the Seagull model (potential parts)
-        local seagullParts = seagull:GetChildren()
-    
-        for _, part in ipairs(seagullParts) do
-          if part:IsA("BasePart") then -- Check if it's a valid part
-            local partCFrame = part.CFrame -- Get the current part's CFrame
-            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-            partCount = partCount + 1 -- Increment collected part count
-          end
-        end
-      end
-    end
-    
-    if partCount > 0 then
-      print("Collected", partCount, "Parts from Seagulls!") -- Print collected amount (if any)
-    else
-      print("No Parts found inside Seagulls!")
-    end
-  end
   
   -- Call the function when needed (e.g., upon button click)
   -- Replace the following line with your desired trigger event
   
   
   
-  local function collectExtinguisherParts() -- Descriptive function name
-    -- Target location for Extinguisher models
-    local extinguisherLocation = game.Workspace.Entities.Items
-  
-    -- Find the Extinguisher models
-    local extinguishers = extinguisherLocation:GetChildren() -- Get all children of Items folder
-    local partCount = 0 -- Counter to track collected parts
-  
-    for _, extinguisher in ipairs(extinguishers) do
-      if extinguisher:IsA("Model") and extinguisher.Name == "Extinguisher" then -- Check if it's a Model named Extinguisher
-        -- Get all immediate children of the Extinguisher model (potential parts)
-        local extinguisherParts = extinguisher:GetChildren()
-    
-        for _, part in ipairs(extinguisherParts) do
-          if part:IsA("BasePart") then -- Check if it's a valid part
-            local partCFrame = part.CFrame -- Get the current part's CFrame
-            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-            partCount = partCount + 1 -- Increment collected part count
-          end
-        end
-      end
-    end
-    
-    if partCount > 0 then
-      print("Collected", partCount, "Parts from Extinguishers!") -- Print collected amount (if any)
-    else
-      print("No Parts found inside Extinguishers!")
-    end
-  end
   
   -- Call the function when needed (e.g., upon button click)
   -- Replace the following line with your desired trigger event
@@ -788,6 +624,36 @@ local function collectKetchups() -- Renamed function to plural for clarity
     end
   end
 
+  local function collectBellParts() -- Descriptive function name
+    -- Target location for Bell models
+    local bellLocation = game.Workspace.Entities.Items
+  
+    -- Find the Bell models
+    local bells = bellLocation:GetChildren() -- Get all children of Items folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, bell in ipairs(bells) do
+      if bell:IsA("Model") and bell.Name == "Bell" then -- Check if it's a Model named Bell
+        -- Get all immediate children of the Bell model (potential parts)
+        local bellParts = bell:GetChildren()
+    
+        for _, part in ipairs(bellParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Bells!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Bells!")
+    end
+  end
+
   local function collectAllPartsFromFries()
     -- Get all children of the Items folder
     local fries = game.Workspace.Entities.Items:GetChildren()
@@ -815,6 +681,128 @@ local function collectKetchups() -- Renamed function to plural for clarity
     end
   end
   
+  local function collectCatParts() -- Descriptive function name
+    -- Target location for Cat models (modify the path if needed)
+    local catLocation = game.Workspace.Entities.Characters.Creatures.Cats 
+  
+    -- Find the Cat models
+    local cats = catLocation:GetChildren() -- Get all children of Cats folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, cat in ipairs(cats) do
+      if cat:IsA("Model") and cat.Name == "Cat" then -- Check if it's a Model named Cat
+        -- Get all immediate children of the Cat model (potential parts)
+        local catParts = cat:GetChildren()
+    
+        for _, part in ipairs(catParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Cats!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Cats!")
+    end
+  end
 
+  local function collectRatParts() -- Descriptive function name
+    -- Target location for Rat models
+    local ratLocation = game.Workspace.Entities.Characters.Creatures.Rats
+  
+    -- Find the Rat models
+    local rats = ratLocation:GetChildren() -- Get all children of Rats folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, rat in ipairs(rats) do
+      if rat:IsA("Model") and rat.Name == "Rat" then -- Check if it's a Model named Rat
+        -- Get all immediate children of the Rat model (potential parts)
+        local ratParts = rat:GetChildren()
+    
+        for _, part in ipairs(ratParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Rats!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Rats!")
+    end
+  end
+
+
+
+  local function collectSeagullParts() -- Descriptive function name
+    -- Target location for Seagull models
+    local seagullLocation = game.Workspace.Entities.Characters.Creatures.Seagulls
+  
+    -- Find the Seagull models
+    local seagulls = seagullLocation:GetChildren() -- Get all children of Seagulls folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, seagull in ipairs(seagulls) do
+      if seagull:IsA("Model") and seagull.Name == "Seagull" then -- Check if it's a Model named Seagull
+        -- Get all immediate children of the Seagull model (potential parts)
+        local seagullParts = seagull:GetChildren()
+    
+        for _, part in ipairs(seagullParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Seagulls!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Seagulls!")
+    end
+  end
+
+
+  local function collectExtinguisherParts() -- Descriptive function name
+    -- Target location for Extinguisher models
+    local extinguisherLocation = game.Workspace.Entities.Items
+  
+    -- Find the Extinguisher models
+    local extinguishers = extinguisherLocation:GetChildren() -- Get all children of Items folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, extinguisher in ipairs(extinguishers) do
+      if extinguisher:IsA("Model") and extinguisher.Name == "Extinguisher" then -- Check if it's a Model named Extinguisher
+        -- Get all immediate children of the Extinguisher model (potential parts)
+        local extinguisherParts = extinguisher:GetChildren()
+    
+        for _, part in ipairs(extinguisherParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Extinguishers!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Extinguishers!")
+    end
+  end
+  
 
 OrionLib:Init()
