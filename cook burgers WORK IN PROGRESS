@@ -289,10 +289,10 @@ teleportTab:AddButton({
 
 
 
+local HELP = game.Workspace.Entities.Items.Plate
 
 
-
-
+local WHY = game.Workspace.Entities.Items.Plate
 
 
 
