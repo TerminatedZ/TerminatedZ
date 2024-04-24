@@ -109,42 +109,6 @@ local function collectTopBuns()
     end
   end
   
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
-
-  
--- LocalScript placed inside a relevant object (e.g., a tool or button)
-
-
-  
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
-
-
-  
-  
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
-
-
-  
-  
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
- 
-  
-  
-  
-  
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
-
-
-  
-
-
-  -- Call the function when needed (e.g., upon button click)
-  -- Replace the following line with your desired trigger event
 
 
   local function collectBottomBuns() -- Renamed function to plural for clarity
