@@ -1,0 +1,30 @@
+local function collectBellParts() -- Descriptive function name
+    -- Target location for Bell models
+    local bellLocation = game.Workspace.Entities.Items
+  
+    -- Find the Bell models
+    local bells = bellLocation:GetChildren() -- Get all children of Items folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, bell in ipairs(bells) do
+      if bell:IsA("Model") and bell.Name == "Bell" then -- Check if it's a Model named Bell
+        -- Get all immediate children of the Bell model (potential parts)
+        local bellParts = bell:GetChildren()
+    
+        for _, part in ipairs(bellParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Bells!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Bells!")
+    end
+  end
+collectBellParts()
