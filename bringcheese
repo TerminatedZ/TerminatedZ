@@ -16,4 +16,4 @@ local function collectCheese()
       print("No Cheese found!")
     end
   end
-collectcheese()
+collectCheese()
