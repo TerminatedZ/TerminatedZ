@@ -1,0 +1,19 @@
+local function collectCheese()
+    local cheeses = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local cheeseCount = 0  -- Counter to track collected Cheese
+  
+    for _, cheese in ipairs(cheeses) do  -- Loop through each child
+      if cheese.Name == "Cheese" then  -- Check if it's a Cheese part
+        cheeseCFrame = cheese.CFrame  -- Get the current Cheese's CFrame
+        cheese.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        cheeseCount = cheeseCount + 1  -- Increment collected Cheese count
+      end
+    end
+    
+    if cheeseCount > 0 then
+      print("Collected", cheeseCount, "Cheeses!")  -- Print collected amount (if any)
+    else
+      print("No Cheese found!")
+    end
+  end
+collectcheese()
