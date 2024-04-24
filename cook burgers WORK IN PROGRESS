@@ -1,0 +1,854 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Cook Burgers", HidePremium = false, SaveConfig = true, ConfigFolder = "CookBurgers"})
+
+
+-- Values
+_G.autoMoney = true
+
+
+
+-- Variables
+
+local args = {
+    [1] = workspace.Entities.Items.Money
+}
+
+
+
+-- Functions
+
+
+local function collectSteaks()
+    local steaks = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local steakCount = 0  -- Counter to track collected Steaks
+  
+    for _, steak in ipairs(steaks) do  -- Loop through each child
+      if steak.Name == "Steak" then  -- Check if it's a Steak part
+        steakCFrame = steak.CFrame  -- Get the current Steak's CFrame
+        steak.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        steakCount = steakCount + 1  -- Increment collected Steak count
+      end
+    end
+    
+    if steakCount > 0 then
+      print("Collected", steakCount, "Steaks!")  -- Print collected amount (if any)
+    else
+      print("No Steaks found!")
+    end
+  end
+
+-- LocalScript placed inside a relevant object (e.g., a tool or button)
+
+local function collectPlates()
+    local plates = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local plateCount = 0  -- Counter to track collected Plates
+  
+    for _, plate in ipairs(plates) do  -- Loop through each child
+      if plate.Name == "Plate" then  -- Check if it's a Plate part
+        plateCFrame = plate.CFrame  -- Get the current Plate's CFrame
+        plate.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        plateCount = plateCount + 1  -- Increment collected Plate count
+      end
+    end
+    
+    if plateCount > 0 then
+      print("Collected", plateCount, "Plates!")  -- Print collected amount (if any)
+    else
+      print("No Plates found!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+ 
+
+  -- LocalScript placed inside a relevant object (e.g., a tool or button)
+
+local function collectCheese()
+    local cheeses = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local cheeseCount = 0  -- Counter to track collected Cheese
+  
+    for _, cheese in ipairs(cheeses) do  -- Loop through each child
+      if cheese.Name == "Cheese" then  -- Check if it's a Cheese part
+        cheeseCFrame = cheese.CFrame  -- Get the current Cheese's CFrame
+        cheese.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        cheeseCount = cheeseCount + 1  -- Increment collected Cheese count
+      end
+    end
+    
+    if cheeseCount > 0 then
+      print("Collected", cheeseCount, "Cheeses!")  -- Print collected amount (if any)
+    else
+      print("No Cheese found!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+
+  
+
+-- LocalScript placed inside a relevant object (e.g., a tool or button)
+
+local function collectTopBuns()
+    local topBuns = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local topBunCount = 0  -- Counter to track collected Top Buns
+  
+    for _, topBun in ipairs(topBuns) do  -- Loop through each child
+      if topBun.Name == "Top Bun" then  -- Check if it's a Top Bun part
+        topBunCFrame = topBun.CFrame  -- Get the current Top Bun's CFrame
+        topBun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        topBunCount = topBunCount + 1  -- Increment collected Top Bun count
+      end
+    end
+    
+    if topBunCount > 0 then
+      print("Collected", topBunCount, "Top Buns!")  -- Print collected amount (if any)
+    else
+      print("No Top Buns found!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+
+  
+-- LocalScript placed inside a relevant object (e.g., a tool or button)
+
+
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+
+
+  
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+
+
+  
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+ 
+  
+  
+  local function collectAllPartsFromPotions()
+    -- Get all children of the Items folder
+    local potions = game.Workspace.Entities.Items:GetChildren()
+    local partCount = 0
+  
+    for _, potion in ipairs(potions) do
+      if potion.Name == "Potion" then
+        -- Get all immediate children of the Potion
+        local potionParts = potion:GetChildren()
+        
+        for _, part in ipairs(potionParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            partCount = partCount + 1
+          end
+        end
+      end
+    end
+  
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Potions!")
+    else
+      print("No Parts found inside Potions!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+
+
+  
+
+  local function collectAllPartsFromFries()
+    -- Get all children of the Items folder
+    local fries = game.Workspace.Entities.Items:GetChildren()
+    local partCount = 0
+  
+    for _, fry in ipairs(fries) do
+      if fry.Name == "Fries" then
+        -- Get all immediate children of the Fries object
+        local fryParts = fry:GetChildren()
+        
+        for _, part in ipairs(fryParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            partCount = partCount + 1
+          end
+        end
+      end
+    end
+  
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Fries!")
+    else
+      print("No Parts found inside Fries!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+
+
+  local function collectBottomBuns() -- Renamed function to plural for clarity
+    local bottomBuns = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
+    local bottomBunCount = 0 -- Counter to track collected Bottom Buns
+  
+    for _, bottomBun in ipairs(bottomBuns) do -- Loop through each child
+      if bottomBun:IsA("BasePart") and bottomBun.Name == "Bottom Bun" then -- Check if it's a BasePart named Bottom Bun
+        local bottomBunCFrame = bottomBun.CFrame -- Get the current Bottom Bun's CFrame
+        bottomBun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+        bottomBunCount = bottomBunCount + 1 -- Increment collected Bottom Bun count
+      end
+    end
+  
+    if bottomBunCount > 0 then
+      print("Collected", bottomBunCount, "Bottom Buns!") -- Print collected amount (if any)
+    else
+      print("No Bottom Buns found!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+  
+
+  local function collectBellParts() -- Descriptive function name
+    -- Target location for Bell models
+    local bellLocation = game.Workspace.Entities.Items
+  
+    -- Find the Bell models
+    local bells = bellLocation:GetChildren() -- Get all children of Items folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, bell in ipairs(bells) do
+      if bell:IsA("Model") and bell.Name == "Bell" then -- Check if it's a Model named Bell
+        -- Get all immediate children of the Bell model (potential parts)
+        local bellParts = bell:GetChildren()
+    
+        for _, part in ipairs(bellParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Bells!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Bells!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+ 
+
+
+  local function collectCatParts() -- Descriptive function name
+    -- Target location for Cat models (modify the path if needed)
+    local catLocation = game.Workspace.Entities.Characters.Creatures.Cats 
+  
+    -- Find the Cat models
+    local cats = catLocation:GetChildren() -- Get all children of Cats folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, cat in ipairs(cats) do
+      if cat:IsA("Model") and cat.Name == "Cat" then -- Check if it's a Model named Cat
+        -- Get all immediate children of the Cat model (potential parts)
+        local catParts = cat:GetChildren()
+    
+        for _, part in ipairs(catParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Cats!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Cats!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+
+
+  local function collectRatParts() -- Descriptive function name
+    -- Target location for Rat models
+    local ratLocation = game.Workspace.Entities.Characters.Creatures.Rats
+  
+    -- Find the Rat models
+    local rats = ratLocation:GetChildren() -- Get all children of Rats folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, rat in ipairs(rats) do
+      if rat:IsA("Model") and rat.Name == "Rat" then -- Check if it's a Model named Rat
+        -- Get all immediate children of the Rat model (potential parts)
+        local ratParts = rat:GetChildren()
+    
+        for _, part in ipairs(ratParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Rats!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Rats!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+
+  
+  local function collectSeagullParts() -- Descriptive function name
+    -- Target location for Seagull models
+    local seagullLocation = game.Workspace.Entities.Characters.Creatures.Seagulls
+  
+    -- Find the Seagull models
+    local seagulls = seagullLocation:GetChildren() -- Get all children of Seagulls folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, seagull in ipairs(seagulls) do
+      if seagull:IsA("Model") and seagull.Name == "Seagull" then -- Check if it's a Model named Seagull
+        -- Get all immediate children of the Seagull model (potential parts)
+        local seagullParts = seagull:GetChildren()
+    
+        for _, part in ipairs(seagullParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Seagulls!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Seagulls!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+  
+  
+  
+  local function collectExtinguisherParts() -- Descriptive function name
+    -- Target location for Extinguisher models
+    local extinguisherLocation = game.Workspace.Entities.Items
+  
+    -- Find the Extinguisher models
+    local extinguishers = extinguisherLocation:GetChildren() -- Get all children of Items folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, extinguisher in ipairs(extinguishers) do
+      if extinguisher:IsA("Model") and extinguisher.Name == "Extinguisher" then -- Check if it's a Model named Extinguisher
+        -- Get all immediate children of the Extinguisher model (potential parts)
+        local extinguisherParts = extinguisher:GetChildren()
+    
+        for _, part in ipairs(extinguisherParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Extinguishers!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Extinguishers!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+  
+
+  local function collectCustomerParts() -- Descriptive function name
+    -- Target location for Customer models
+    local customerLocation = game.Workspace.Entities.Characters.Humans.Customers
+  
+    -- Find the Customer models
+    local customers = customerLocation:GetChildren() -- Get all children of Customers folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, customer in ipairs(customers) do
+      if customer:IsA("Model") and customer.Name == "Customer" then -- Check if it's a Model named Customer
+        -- Get all immediate children of the Customer model (potential parts)
+        local customerParts = customer:GetChildren()
+    
+        for _, part in ipairs(customerParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Customers!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Customers!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+  
+  
+  
+  local function collectMicrowaveParts() -- Descriptive function name
+    -- Target location for Microwave models
+    local microwaveLocation = game.Workspace.Entities.Items
+  
+    -- Find the Microwave models
+    local microwaves = microwaveLocation:GetChildren() -- Get all children of Items folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, microwave in ipairs(microwaves) do
+      if microwave:IsA("Model") and microwave.Name == "Microwave" then -- Check if it's a Model named Microwave
+        -- Get all immediate children of the Microwave model (potential parts)
+        local microwaveParts = microwave:GetChildren()
+    
+        for _, part in ipairs(microwaveParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Microwaves!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Microwaves!")
+    end
+  end
+  
+  -- Call the function when needed (e.g., upon button click)
+  -- Replace the following line with your desired trigger event
+ 
+  
+
+  local function autoMoney() -- Function name changed to reflect its purpose
+
+    -- Continuously check for money with error handling
+    local waitTime = 0.3 -- Adjust wait time in seconds
+  
+    while true do  -- Loop continuously
+      local success, money = pcall(function()
+        return workspace.Entities.Items.Money
+      end)
+  
+      if success then
+        checkForMoney(money) -- Call the checkForMoney function
+      else
+        print("Error finding money:", success) -- Print error message for debugging
+      end
+  
+      wait(waitTime) -- Wait before checking again
+    end
+  
+    print("Auto money script stopped.") -- Informative message
+  end
+  
+  -- Function to check for money
+  local function checkForMoney(money)
+    if money then
+      money.CFrame = CFrame.new(-62, 86, -337) -- Teleport money
+      print("Teleported money!")
+  
+      -- Trigger server-side functionality using args (modify if needed)
+      local args = {
+        [1] = workspace.Entities.Items.Money
+      }
+      game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
+    else
+      print("No money found, waiting...")
+    end
+  end
+  
+  -- Call the function (uncomment if desired)
+  -- autoMoney()
+  
+
+
+
+-- Positions
+local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+
+-- Tabs
+local farmTab = Window:MakeTab({
+	Name = "Autofarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local potionsTab = Window:MakeTab({
+	Name = "Potions",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local teleportTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+-- Sections
+local Section = potionsTab:AddSection({
+	Name = "ONLY WORKS IF THE POTION EXISTS"
+})
+
+local Section = teleportTab:AddSection({
+	Name = "Place Teleports"
+})
+
+
+
+  
+
+-- Buttons
+
+potionsTab:AddButton({
+	Name = "Green Potion (RAT)",
+	Callback = function()
+      	workspace.Entities.Items.Potion.ContextAction:FireServer()
+  	end    
+})
+
+
+potionsTab:AddButton({
+	Name = "Purple Potion (CAT)",
+	Callback = function()
+		workspace.Entities.Items.CatPotion.ContextAction:FireServer()
+  	end    
+})
+
+
+
+potionsTab:AddButton({
+	Name = "Orange Potion (SPECIAL RAT)",
+	Callback = function()
+		workspace.Entities.Items.OrangePotion.ContextAction:FireServer()
+  	end    
+})
+
+local game = game.Workspace
+
+
+teleportTab:AddButton({
+	Name = "Restaurant",
+	Callback = function()
+		Player.CFrame = CFrame.new(-25, 85, -270)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Kitchen",
+	Callback = function()
+		Player.CFrame = CFrame.new(-38, 86, -362)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Sewers",
+	Callback = function()
+		Player.CFrame = CFrame.new(57, 70, -901)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Potion Room",
+	Callback = function()
+		Player.CFrame = CFrame.new(-36, 66, -844)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -177)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Room Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -117)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bakery",
+	Callback = function()
+		Player.CFrame = CFrame.new(22, 87, -181)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Forklifts",
+	Callback = function()
+		Player.CFrame = CFrame.new(-145, 85, -61)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Basketball Court",
+	Callback = function()
+		Player.CFrame = CFrame.new(117, 86, -552)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "VR Spawn",
+	Callback = function()
+		Player.CFrame = CFrame.new(310, 112, -53)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Area",
+	Callback = function()
+		Player.CFrame = CFrame.new(329, 95, -170)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "AMONG US",
+	Callback = function()
+		Player.CFrame = CFrame.new(-146, 116, -489)
+  	end    
+})
+
+local Section = teleportTab:AddSection({
+	Name = "Item Teleporters"
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Steak",
+	Callback = function()
+		collectSteaks()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cheese",
+	Callback = function()
+		collectCheese()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Salad",
+	Callback = function()
+		collectSalads()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Top Buns",
+	Callback = function()
+		collectTopBuns()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Plates",
+	Callback = function()
+		collectPlates()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Bottom Buns",
+	Callback = function()
+		collectBottomBuns()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Fries",
+	Callback = function()
+		collectAllPartsFromFries()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Mustard",
+	Callback = function()
+		collectMustards()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Ketchup",
+	Callback = function()
+		collectKetchups()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Potions",
+	Callback = function()
+		collectAllPartsFromPotions()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Bells",
+	Callback = function()
+		collectBellParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cats",
+	Callback = function()
+		collectCatParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Rats",
+	Callback = function()
+		collectRatParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Seagulls",
+	Callback = function()
+		collectCatParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Customers (ON STREET)",
+	Callback = function()
+		collectCustomerParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Extinguishers",
+	Callback = function()
+		collectExtinguisherParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Microwave",
+	Callback = function()
+		collectMicrowaveParts()
+  	end    
+})
+
+-- Toggles
+
+farmTab:AddToggle({
+  Name = "Autofarm",
+  Default = false,
+  Callback = function(Value)
+    autoMoney(Value) -- Call the function with the toggle value
+  end
+})
+
+OrionLib:MakeNotification({
+	Name = "Script!",
+	Content = "Script made by TerminatedZ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local function collectSalads()  -- Renamed function to plural for clarity
+    local salads = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local saladCount = 0  -- Counter to track collected Salads
+  
+    for _, salad in ipairs(salads) do  -- Loop through each child
+      if salad.Name == "Salad" then  -- Check if it's a Salad part
+        saladCFrame = salad.CFrame  -- Get the current Salad's CFrame
+        salad.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        saladCount = saladCount + 1  -- Increment collected Salad count
+      end
+    end
+    
+    if saladCount > 0 then
+      print("Collected", saladCount, "Salads!")  -- Print collected amount (if any)
+    else
+      print("e")
+    end
+end
+
+local function collectMustards() -- Renamed function to plural for clarity
+    local mustards = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
+    local mustardCount = 0 -- Counter to track collected Mustards
+  
+    for _, mustard in ipairs(mustards) do -- Loop through each child
+      if mustard.Name == "Mustard" then -- Check if it's a Mustard part
+        local mustardCFrame = mustard.CFrame -- Get the current Mustard's CFrame
+        mustard.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+        mustardCount = mustardCount + 1 -- Increment collected Mustard count
+      end
+    end
+end
+
+local function collectKetchups() -- Renamed function to plural for clarity
+    local ketchups = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
+    local ketchupCount = 0 -- Counter to track collected Ketchups
+  
+    for _, ketchup in ipairs(ketchups) do -- Loop through each child of Items folder
+      if ketchup:IsA("BasePart") and ketchup.Name == "Ketchup" then -- Check if it's a BasePart named Ketchup
+        local ketchupCFrame = ketchup.CFrame -- Get the current Ketchup's CFrame
+        ketchup.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+        ketchupCount = ketchupCount + 1 -- Increment collected Ketchup count
+      end
+    end
+  
+    if ketchupCount > 0 then
+      print("Collected", ketchupCount, "Ketchups!") -- Print collected amount (if any)
+    else
+      print("No Ketchups found!")
+    end
+  end
+
+
+
+
+OrionLib:Init()
