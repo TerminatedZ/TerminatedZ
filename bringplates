@@ -1,0 +1,19 @@
+local function collectPlates()
+    local plates = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local plateCount = 0  -- Counter to track collected Plates
+  
+    for _, plate in ipairs(plates) do  -- Loop through each child
+      if plate.Name == "Plate" then  -- Check if it's a Plate part
+        plateCFrame = plate.CFrame  -- Get the current Plate's CFrame
+        plate.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        plateCount = plateCount + 1  -- Increment collected Plate count
+      end
+    end
+    
+    if plateCount > 0 then
+      print("Collected", plateCount, "Plates!")  -- Print collected amount (if any)
+    else
+      print("No Plates found!")
+    end
+  end
+collectPlates()
