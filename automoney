@@ -13,7 +13,7 @@ local function waitAndTeleportMoney() -- Descriptive function name
       print("Teleported Money part!")
 
       -- Trigger server-side functionality without arguments (modify if needed)
-      game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer()
+      game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
     else
       -- Error handling and wait
       print("Money part not found, waiting...")
