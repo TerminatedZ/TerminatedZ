@@ -383,6 +383,38 @@ local function collectBellParts() -- Descriptive function name
     end
   end
 
+  local function collectMicrowaveParts() -- Descriptive function name
+    -- Target location for Microwave models
+    local microwaveLocation = game.Workspace.Entities.Items
+  
+    -- Find the Microwave models
+    local microwaves = microwaveLocation:GetChildren() -- Get all children of Items folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, microwave in ipairs(microwaves) do
+      if microwave:IsA("Model") and microwave.Name == "Microwave" then -- Check if it's a Model named Microwave
+        -- Get all immediate children of the Microwave model (potential parts)
+        local microwaveParts = microwave:GetChildren()
+    
+        for _, part in ipairs(microwaveParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Microwaves!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Microwaves!")
+    end
+  end
+
+
+
   local function collectAllPartsFromFries()
     -- Get all children of the Items folder
     local fries = game.Workspace.Entities.Items:GetChildren()
@@ -697,35 +729,7 @@ local function collectTopBuns()
   
   
   
-  local function collectMicrowaveParts() -- Descriptive function name
-    -- Target location for Microwave models
-    local microwaveLocation = game.Workspace.Entities.Items
-  
-    -- Find the Microwave models
-    local microwaves = microwaveLocation:GetChildren() -- Get all children of Items folder
-    local partCount = 0 -- Counter to track collected parts
-  
-    for _, microwave in ipairs(microwaves) do
-      if microwave:IsA("Model") and microwave.Name == "Microwave" then -- Check if it's a Model named Microwave
-        -- Get all immediate children of the Microwave model (potential parts)
-        local microwaveParts = microwave:GetChildren()
-    
-        for _, part in ipairs(microwaveParts) do
-          if part:IsA("BasePart") then -- Check if it's a valid part
-            local partCFrame = part.CFrame -- Get the current part's CFrame
-            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-            partCount = partCount + 1 -- Increment collected part count
-          end
-        end
-      end
-    end
-    
-    if partCount > 0 then
-      print("Collected", partCount, "Parts from Microwaves!") -- Print collected amount (if any)
-    else
-      print("No Parts found inside Microwaves!")
-    end
-  end
+
   
   -- Call the function when needed (e.g., upon button click)
   -- Replace the following line with your desired trigger event
@@ -796,4 +800,3 @@ end
   
 
 OrionLib:Init()
-end
