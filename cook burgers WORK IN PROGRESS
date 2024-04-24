@@ -117,12 +117,19 @@ teleportTab:AddButton({
   	end    
 })
 
-farmTab:AddButton({
-	Name = "Auto Pickup Money",
-	Callback = function()
-      		autoMoney()
-  	end    
+Tab:AddToggle({
+	Name = "Auto Collect Money",
+	Default = false,
+	Callback = function(Value)
+		autoMoney(Value)
+	end    
 })
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
 
 
 teleportTab:AddButton({
@@ -183,105 +190,106 @@ local Section = teleportTab:AddSection({
 teleportTab:AddButton({
 	Name = "Bring All Steak",
 	Callback = function()
-		collectSteaks()
+		    collectSteaks()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Cheese",
 	Callback = function()
-		collectCheese()
+		    collectCheese()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Salad",
 	Callback = function()
-		collectSalads()
+		    collectSalads()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Top Buns",
 	Callback = function()
-		collectTopBuns()
+		    collectTopBuns()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Plates",
 	Callback = function()
-		collectPlates()
+		    collectPlates()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Bottom Buns",
 	Callback = function()
-		collectBottomBuns()
+		    collectBottomBuns()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Fries",
 	Callback = function()
-		collectAllPartsFromFries()
+		    collectAllPartsFromFries()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Mustard",
 	Callback = function()
-		collectMustards()
+		    collectMustards()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Ketchup",
 	Callback = function()
-		collectKetchups()
+		    collectKetchups()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring Microwave",
 	Callback = function()
-		collectMicrowaveParts()
+		    collectMicrowaveParts()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Potions",
 	Callback = function()
-		collectAllPartsFromPotions()
+		    collectAllPartsFromPotions()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Bells",
 	Callback = function()
-		collectBellParts()
+		    collectBellParts()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Cats",
 	Callback = function()
-		collectCatParts()
+		    collectCatParts()
   	end    
 })
+
 
 teleportTab:AddButton({
 	Name = "Bring All Rats",
 	Callback = function()
-		collectRatParts()
+		    collectRatParts()
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bring All Seagulls",
 	Callback = function()
-		collectCatParts()
+		    collectCatParts()
   	end    
 })
 
