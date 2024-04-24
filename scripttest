@@ -1,0 +1,172 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Cook Burgers", HidePremium = false, SaveConfig = true, ConfigFolder = "CookBurgers"})
+
+
+
+-- Positions
+local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+
+-- Tabs
+local farmTab = Window:MakeTab({
+	Name = "Autofarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local potionsTab = Window:MakeTab({
+	Name = "Potions",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local teleportTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+-- Sections
+local Section = potionsTab:AddSection({
+	Name = "ONLY WORKS IF THE POTION EXISTS"
+})
+
+local Section = teleportTab:AddSection({
+	Name = "Place Teleports"
+})
+
+
+
+
+-- Buttons
+
+potionsTab:AddButton({
+	Name = "Green Potion (RAT)",
+	Callback = function()
+      	workspace.Entities.Items.Potion.ContextAction:FireServer()
+  	end    
+})
+
+
+potionsTab:AddButton({
+	Name = "Purple Potion (CAT)",
+	Callback = function()
+		workspace.Entities.Items.CatPotion.ContextAction:FireServer()
+  	end    
+})
+
+
+
+potionsTab:AddButton({
+	Name = "Orange Potion (SPECIAL RAT)",
+	Callback = function()
+		workspace.Entities.Items.OrangePotion.ContextAction:FireServer()
+  	end    
+})
+
+local game = game.Workspace
+
+farmTab:AddToggle({
+	Name = "Auto Collect Money",
+	Default = false,
+	Callback = function(Value)
+		waitAndTeleportMoney()
+	end    
+})
+
+
+teleportTab:AddButton({
+	Name = "Restaurant",
+	Callback = function()
+		Player.CFrame = CFrame.new(-25, 85, -270)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Kitchen",
+	Callback = function()
+		Player.CFrame = CFrame.new(-38, 86, -362)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Sewers",
+	Callback = function()
+		Player.CFrame = CFrame.new(57, 70, -901)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Potion Room",
+	Callback = function()
+		Player.CFrame = CFrame.new(-36, 66, -844)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -177)
+  	end    
+})
+
+
+
+teleportTab:AddButton({
+	Name = "Secret Room Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -117)
+  	end    
+})
+
+
+
+teleportTab:AddButton({
+	Name = "Bakery",
+	Callback = function()
+		Player.CFrame = CFrame.new(22, 87, -181)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Forklifts",
+	Callback = function()
+		Player.CFrame = CFrame.new(-145, 85, -61)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Basketball Court",
+	Callback = function()
+		Player.CFrame = CFrame.new(117, 86, -552)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "VR Spawn",
+	Callback = function()
+		Player.CFrame = CFrame.new(310, 112, -53)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Area",
+	Callback = function()
+		Player.CFrame = CFrame.new(329, 95, -170)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "AMONG US",
+	Callback = function()
+		Player.CFrame = CFrame.new(-146, 116, -489)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "steaktest",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringpotions",true))()
+  	end    
+})
