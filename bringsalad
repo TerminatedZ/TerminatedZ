@@ -1,0 +1,19 @@
+local function collectSalads()  -- Renamed function to plural for clarity
+    local salads = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local saladCount = 0  -- Counter to track collected Salads
+  
+    for _, salad in ipairs(salads) do  -- Loop through each child
+      if salad.Name == "Salad" then  -- Check if it's a Salad part
+        saladCFrame = salad.CFrame  -- Get the current Salad's CFrame
+        salad.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        saladCount = saladCount + 1  -- Increment collected Salad count
+      end
+    end
+    
+    if saladCount > 0 then
+      print("Collected", saladCount, "Salads!")  -- Print collected amount (if any)
+    else
+      print("e")
+    end
+end
+collectSalads()
