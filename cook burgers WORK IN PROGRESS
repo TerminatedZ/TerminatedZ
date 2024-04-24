@@ -285,12 +285,18 @@ teleportTab:AddButton({
   	end    
 })
 
-teleportTab:AddButton({
-	Name = "Bring All Customers (ON STREET)",
-	Callback = function()
-		collectCustomerParts()
-  	end    
-})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
