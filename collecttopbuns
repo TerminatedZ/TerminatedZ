@@ -1,0 +1,19 @@
+local function collectTopBuns()
+    local topBuns = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local topBunCount = 0  -- Counter to track collected Top Buns
+  
+    for _, topBun in ipairs(topBuns) do  -- Loop through each child
+      if topBun.Name == "Top Bun" then  -- Check if it's a Top Bun part
+        topBunCFrame = topBun.CFrame  -- Get the current Top Bun's CFrame
+        topBun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        topBunCount = topBunCount + 1  -- Increment collected Top Bun count
+      end
+    end
+    
+    if topBunCount > 0 then
+      print("Collected", topBunCount, "Top Buns!")  -- Print collected amount (if any)
+    else
+      print("No Top Buns found!")
+    end
+  end
+collectTopBuns()
