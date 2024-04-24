@@ -17,7 +17,296 @@ local args = {
     [1] = workspace.Entities.Items.Money
 }
 
+-- Positions
+local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
 
+
+-- Tabs
+local farmTab = Window:MakeTab({
+	Name = "Autofarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local potionsTab = Window:MakeTab({
+	Name = "Potions",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local teleportTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+-- Sections
+local Section = potionsTab:AddSection({
+	Name = "ONLY WORKS IF THE POTION EXISTS"
+})
+
+local Section = teleportTab:AddSection({
+	Name = "Place Teleports"
+})
+
+
+
+
+-- Buttons
+
+potionsTab:AddButton({
+	Name = "Green Potion (RAT)",
+	Callback = function()
+      	workspace.Entities.Items.Potion.ContextAction:FireServer()
+  	end    
+})
+
+
+potionsTab:AddButton({
+	Name = "Purple Potion (CAT)",
+	Callback = function()
+		workspace.Entities.Items.CatPotion.ContextAction:FireServer()
+  	end    
+})
+
+
+
+potionsTab:AddButton({
+	Name = "Orange Potion (SPECIAL RAT)",
+	Callback = function()
+		workspace.Entities.Items.OrangePotion.ContextAction:FireServer()
+  	end    
+})
+
+local game = game.Workspace
+
+
+teleportTab:AddButton({
+	Name = "Restaurant",
+	Callback = function()
+		Player.CFrame = CFrame.new(-25, 85, -270)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Kitchen",
+	Callback = function()
+		Player.CFrame = CFrame.new(-38, 86, -362)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Sewers",
+	Callback = function()
+		Player.CFrame = CFrame.new(57, 70, -901)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Potion Room",
+	Callback = function()
+		Player.CFrame = CFrame.new(-36, 66, -844)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -177)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Room Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -117)
+  	end    
+})
+
+
+
+teleportTab:AddButton({
+	Name = "Bakery",
+	Callback = function()
+		Player.CFrame = CFrame.new(22, 87, -181)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Forklifts",
+	Callback = function()
+		Player.CFrame = CFrame.new(-145, 85, -61)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Basketball Court",
+	Callback = function()
+		Player.CFrame = CFrame.new(117, 86, -552)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "VR Spawn",
+	Callback = function()
+		Player.CFrame = CFrame.new(310, 112, -53)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Area",
+	Callback = function()
+		Player.CFrame = CFrame.new(329, 95, -170)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "AMONG US",
+	Callback = function()
+		Player.CFrame = CFrame.new(-146, 116, -489)
+  	end    
+})
+
+local Section = teleportTab:AddSection({
+	Name = "Item Teleporters"
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Steak",
+	Callback = function()
+		collectSteaks()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cheese",
+	Callback = function()
+		collectCheese()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Salad",
+	Callback = function()
+		collectSalads()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Top Buns",
+	Callback = function()
+		collectTopBuns()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Plates",
+	Callback = function()
+		collectPlates()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Bottom Buns",
+	Callback = function()
+		collectBottomBuns()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Fries",
+	Callback = function()
+		collectAllPartsFromFries()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Mustard",
+	Callback = function()
+		collectMustards()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Ketchup",
+	Callback = function()
+		collectKetchups()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Potions",
+	Callback = function()
+		collectAllPartsFromPotions()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Bells",
+	Callback = function()
+		collectBellParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cats",
+	Callback = function()
+		collectCatParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Rats",
+	Callback = function()
+		collectRatParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Seagulls",
+	Callback = function()
+		collectCatParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Customers (ON STREET)",
+	Callback = function()
+		collectCustomerParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Extinguishers",
+	Callback = function()
+		collectExtinguisherParts()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Microwave",
+	Callback = function()
+		collectMicrowaveParts()
+  	end    
+})
+
+-- Toggles
+
+farmTab:AddToggle({
+  Name = "Autofarm",
+  Default = false,
+  Callback = function(Value)
+    autoMoney(Value) -- Call the function with the toggle value
+  end
+})
+
+OrionLib:MakeNotification({
+	Name = "Script!",
+	Content = "Script made by TerminatedZ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
 
 -- Functions
 
@@ -489,300 +778,9 @@ local function collectTopBuns()
 
 
 
--- Positions
-local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
-
-
--- Tabs
-local farmTab = Window:MakeTab({
-	Name = "Autofarm",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local potionsTab = Window:MakeTab({
-	Name = "Potions",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local teleportTab = Window:MakeTab({
-	Name = "Teleports",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-
--- Sections
-local Section = potionsTab:AddSection({
-	Name = "ONLY WORKS IF THE POTION EXISTS"
-})
-
-local Section = teleportTab:AddSection({
-	Name = "Place Teleports"
-})
-
-
-
-
--- Buttons
-
-potionsTab:AddButton({
-	Name = "Green Potion (RAT)",
-	Callback = function()
-      	workspace.Entities.Items.Potion.ContextAction:FireServer()
-  	end    
-})
-
-
-potionsTab:AddButton({
-	Name = "Purple Potion (CAT)",
-	Callback = function()
-		workspace.Entities.Items.CatPotion.ContextAction:FireServer()
-  	end    
-})
-
-
-
-potionsTab:AddButton({
-	Name = "Orange Potion (SPECIAL RAT)",
-	Callback = function()
-		workspace.Entities.Items.OrangePotion.ContextAction:FireServer()
-  	end    
-})
-
-local game = game.Workspace
-
-
-teleportTab:AddButton({
-	Name = "Restaurant",
-	Callback = function()
-		Player.CFrame = CFrame.new(-25, 85, -270)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Kitchen",
-	Callback = function()
-		Player.CFrame = CFrame.new(-38, 86, -362)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Sewers",
-	Callback = function()
-		Player.CFrame = CFrame.new(57, 70, -901)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Potion Room",
-	Callback = function()
-		Player.CFrame = CFrame.new(-36, 66, -844)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Supermarket",
-	Callback = function()
-		Player.CFrame = CFrame.new(114, 86, -177)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Secret Room Supermarket",
-	Callback = function()
-		Player.CFrame = CFrame.new(114, 86, -117)
-  	end    
-})
-
-
-
-teleportTab:AddButton({
-	Name = "Bakery",
-	Callback = function()
-		Player.CFrame = CFrame.new(22, 87, -181)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Forklifts",
-	Callback = function()
-		Player.CFrame = CFrame.new(-145, 85, -61)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Basketball Court",
-	Callback = function()
-		Player.CFrame = CFrame.new(117, 86, -552)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "VR Spawn",
-	Callback = function()
-		Player.CFrame = CFrame.new(310, 112, -53)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Secret Area",
-	Callback = function()
-		Player.CFrame = CFrame.new(329, 95, -170)
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "AMONG US",
-	Callback = function()
-		Player.CFrame = CFrame.new(-146, 116, -489)
-  	end    
-})
-
-local Section = teleportTab:AddSection({
-	Name = "Item Teleporters"
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Steak",
-	Callback = function()
-		collectSteaks()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Cheese",
-	Callback = function()
-		collectCheese()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Salad",
-	Callback = function()
-		collectSalads()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Top Buns",
-	Callback = function()
-		collectTopBuns()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Plates",
-	Callback = function()
-		collectPlates()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Bottom Buns",
-	Callback = function()
-		collectBottomBuns()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Fries",
-	Callback = function()
-		collectAllPartsFromFries()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Mustard",
-	Callback = function()
-		collectMustards()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Ketchup",
-	Callback = function()
-		collectKetchups()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Potions",
-	Callback = function()
-		collectAllPartsFromPotions()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Bells",
-	Callback = function()
-		collectBellParts()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Cats",
-	Callback = function()
-		collectCatParts()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Rats",
-	Callback = function()
-		collectRatParts()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Seagulls",
-	Callback = function()
-		collectCatParts()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Customers (ON STREET)",
-	Callback = function()
-		collectCustomerParts()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring All Extinguishers",
-	Callback = function()
-		collectExtinguisherParts()
-  	end    
-})
-
-teleportTab:AddButton({
-	Name = "Bring Microwave",
-	Callback = function()
-		collectMicrowaveParts()
-  	end    
-})
-
--- Toggles
-
-farmTab:AddToggle({
-  Name = "Autofarm",
-  Default = false,
-  Callback = function(Value)
-    autoMoney(Value) -- Call the function with the toggle value
-  end
-})
-
-OrionLib:MakeNotification({
-	Name = "Script!",
-	Content = "Script made by TerminatedZ",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-
-
 
  
   
 
 OrionLib:Init()
+end
