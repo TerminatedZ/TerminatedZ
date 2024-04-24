@@ -140,35 +140,19 @@ local function collectBellParts() -- Descriptive function name
 
 
 
-  local function collectSeagullParts() -- Descriptive function name
-    -- Target location for Seagull models
-    local seagullLocation = game.Workspace.Entities.Characters.Creatures.Seagulls
+
+
+
+
+
+
+
+
+
+
+
+
   
-    -- Find the Seagull models
-    local seagulls = seagullLocation:GetChildren() -- Get all children of Seagulls folder
-    local partCount = 0 -- Counter to track collected parts
-  
-    for _, seagull in ipairs(seagulls) do
-      if seagull:IsA("Model") and seagull.Name == "Seagull" then -- Check if it's a Model named Seagull
-        -- Get all immediate children of the Seagull model (potential parts)
-        local seagullParts = seagull:GetChildren()
-    
-        for _, part in ipairs(seagullParts) do
-          if part:IsA("BasePart") then -- Check if it's a valid part
-            local partCFrame = part.CFrame -- Get the current part's CFrame
-            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
-            partCount = partCount + 1 -- Increment collected part count
-          end
-        end
-      end
-    end
-    
-    if partCount > 0 then
-      print("Collected", partCount, "Parts from Seagulls!") -- Print collected amount (if any)
-    else
-      print("No Parts found inside Seagulls!")
-    end
-  end
 
 
   local function collectExtinguisherParts() -- Descriptive function name
