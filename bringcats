@@ -1,0 +1,30 @@
+local function collectCatParts() -- Descriptive function name
+    -- Target location for Cat models (modify the path if needed)
+    local catLocation = game.Workspace.Entities.Characters.Creatures.Cats 
+  
+    -- Find the Cat models
+    local cats = catLocation:GetChildren() -- Get all children of Cats folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, cat in ipairs(cats) do
+      if cat:IsA("Model") and cat.Name == "Cat" then -- Check if it's a Model named Cat
+        -- Get all immediate children of the Cat model (potential parts)
+        local catParts = cat:GetChildren()
+    
+        for _, part in ipairs(catParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Cats!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Cats!")
+    end
+  end
+collectCatParts()
