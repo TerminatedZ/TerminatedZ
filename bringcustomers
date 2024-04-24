@@ -1,0 +1,23 @@
+local function collectCustomerParts() -- Descriptive function name
+    -- Target location for Customer models
+    local customerLocation = game.Workspace.Entities.Characters.Humans.Customers
+  
+    -- Find the Customer models
+    local customers = customerLocation:GetChildren() -- Get all children of Customers folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, customer in ipairs(customers) do
+      if customer:IsA("Model") and customer.Name == "Customer" then -- Check if it's a Model named Customer
+        -- Get all immediate children of the Customer model (potential parts)
+        local customerParts = customer:GetChildren()
+    
+        for _, part in ipairs(customerParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+collectCustomerParts()
