@@ -1,0 +1,30 @@
+local function collectSeagullParts() -- Descriptive function name
+  -- Target location for Seagull models
+  local seagullLocation = game.Workspace.Entities.Characters.Creatures.Seagulls
+
+  -- Find the Seagull models
+  local seagulls = seagullLocation:GetChildren() -- Get all children of Seagulls folder 
+  local collectedParts = 0 -- Counter to track collected parts
+
+  for _, seagull in ipairs(seagulls) do
+    if seagull:IsA("Model") and seagull.Name == "Seagull" then -- Check if it's a Model named Seagull
+      -- Get all parts directly inside the Seagull model
+      local seagullParts = seagull:GetChildren()
+  
+      for _, part in ipairs(seagullParts) do
+        if part:IsA("BasePart") then -- Check if it's a valid part
+          local partCFrame = part.CFrame -- Get the current part's CFrame
+          part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0) -- Teleport with vertical offset
+          collectedParts = collectedParts + 1 -- Increment collected part count
+        end
+      end
+    end
+  end
+  
+  if collectedParts > 0 then
+    print("Collected", collectedParts, "Parts from Seagulls!") -- Print collected amount (if any)
+  else
+    print("No Parts found inside Seagulls!")
+  end
+end
+collectSeagullParts()
