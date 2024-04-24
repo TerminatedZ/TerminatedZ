@@ -67,13 +67,6 @@ potionsTab:AddButton({
 
 local game = game.Workspace
 
-farmTab:AddToggle({
-	Name = "Auto Collect Money",
-	Default = false,
-	Callback = function(Value)
-		waitAndTeleportMoney()
-	end    
-})
 
 
 teleportTab:AddButton({
