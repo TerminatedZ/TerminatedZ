@@ -482,7 +482,6 @@ local function collectTopBuns()
     else
       print("No money found, waiting...")
     end
-  end
   
   -- Call the function (uncomment if desired)
   -- autoMoney()
