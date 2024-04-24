@@ -141,20 +141,6 @@ local function collectBellParts() -- Descriptive function name
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
   local function collectExtinguisherParts() -- Descriptive function name
     -- Target location for Extinguisher models
     local extinguisherLocation = game.Workspace.Entities.Items
