@@ -117,7 +117,7 @@ teleportTab:AddButton({
   	end    
 })
 
-Tab:AddToggle({
+farmTab:AddToggle({
 	Name = "Auto Collect Money",
 	Default = false,
 	Callback = function(Value)
