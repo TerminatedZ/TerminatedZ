@@ -1,0 +1,19 @@
+local function collectSteaks()
+    local steaks = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
+    local steakCount = 0  -- Counter to track collected Steaks
+  
+    for _, steak in ipairs(steaks) do  -- Loop through each child
+      if steak.Name == "Steak" then  -- Check if it's a Steak part
+        steakCFrame = steak.CFrame  -- Get the current Steak's CFrame
+        steak.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        steakCount = steakCount + 1  -- Increment collected Steak count
+      end
+    end
+    
+    if steakCount > 0 then
+      print("Collected", steakCount, "Steaks!")  -- Print collected amount (if any)
+    else
+      print("No Steaks found!")
+    end
+  end
+collectSteaks()
