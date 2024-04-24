@@ -3,6 +3,16 @@ local Window = OrionLib:MakeWindow({Name = "Cook Burgers", HidePremium = false, 
 
 
 
+function steak()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringpotions",true))()
+    print("Working!")
+end
+
+
+
+
+
+
 -- Positions
 local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
 
@@ -64,8 +74,6 @@ potionsTab:AddButton({
 		workspace.Entities.Items.OrangePotion.ContextAction:FireServer()
   	end    
 })
-
-local game = game.Workspace
 
 
 
@@ -160,6 +168,10 @@ teleportTab:AddButton({
 teleportTab:AddButton({
 	Name = "steaktest",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringpotions",true))()
+		steak()
   	end    
 })
+
+
+
+OrionLib:Init()
