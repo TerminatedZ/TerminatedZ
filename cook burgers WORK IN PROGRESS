@@ -289,12 +289,11 @@ teleportTab:AddButton({
 
 -- Toggles
 
-farmTab:AddToggle({
-  Name = "Autofarm",
-  Default = false,
-  Callback = function(Value)
-    autoMoney(Value) -- Call the function with the toggle value
-  end
+Tab:AddButton({
+	Name = "Auto Pickup Money",
+	Callback = function()
+      		autoMoney()
+  	end    
 })
 
 OrionLib:MakeNotification({
