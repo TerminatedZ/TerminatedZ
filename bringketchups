@@ -1,0 +1,19 @@
+local function collectKetchups() -- Renamed function to plural for clarity
+    local ketchups = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
+    local ketchupCount = 0 -- Counter to track collected Ketchups
+  
+    for _, ketchup in ipairs(ketchups) do -- Loop through each child of Items folder
+      if ketchup:IsA("BasePart") and ketchup.Name == "Ketchup" then -- Check if it's a BasePart named Ketchup
+        local ketchupCFrame = ketchup.CFrame -- Get the current Ketchup's CFrame
+        ketchup.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+        ketchupCount = ketchupCount + 1 -- Increment collected Ketchup count
+      end
+    end
+  
+    if ketchupCount > 0 then
+      print("Collected", ketchupCount, "Ketchups!") -- Print collected amount (if any)
+    else
+      print("No Ketchups found!")
+    end
+  end
+collectKetchups()
