@@ -288,12 +288,6 @@ teleportTab:AddButton({
   	end    
 })
 
-teleportTab:AddButton({
-	Name = "Bring All Seagulls",
-	Callback = function()
-		collectCatParts()
-  	end    
-})
 
 
 
