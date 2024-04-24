@@ -1,0 +1,30 @@
+local function collectRatParts() -- Descriptive function name
+    -- Target location for Rat models
+    local ratLocation = game.Workspace.Entities.Characters.Creatures.Rats
+  
+    -- Find the Rat models
+    local rats = ratLocation:GetChildren() -- Get all children of Rats folder
+    local partCount = 0 -- Counter to track collected parts
+  
+    for _, rat in ipairs(rats) do
+      if rat:IsA("Model") and rat.Name == "Rat" then -- Check if it's a Model named Rat
+        -- Get all immediate children of the Rat model (potential parts)
+        local ratParts = rat:GetChildren()
+    
+        for _, part in ipairs(ratParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame -- Get the current part's CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            partCount = partCount + 1 -- Increment collected part count
+          end
+        end
+      end
+    end
+    
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Rats!") -- Print collected amount (if any)
+    else
+      print("No Parts found inside Rats!")
+    end
+  end
+collectRatParts()
