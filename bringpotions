@@ -1,0 +1,27 @@
+local function collectAllPartsFromPotions()
+    -- Get all children of the Items folder
+    local potions = game.Workspace.Entities.Items:GetChildren()
+    local partCount = 0
+  
+    for _, potion in ipairs(potions) do
+      if potion.Name == "Potion" then
+        -- Get all immediate children of the Potion
+        local potionParts = potion:GetChildren()
+        
+        for _, part in ipairs(potionParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            partCount = partCount + 1
+          end
+        end
+      end
+    end
+  
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Potions!")
+    else
+      print("No Parts found inside Potions!")
+    end
+  end
+collectAllPartsFromPotions()
