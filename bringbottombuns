@@ -1,0 +1,20 @@
+local function collectBottomBuns() -- Descriptive function name
+  local bottomBuns = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
+  local bottomBunCount = 0 -- Counter to track collected Bottom Buns
+
+  for _, bottomBun in ipairs(bottomBuns) do -- Loop through each child
+    if bottomBun.Name == "Bottom Bun" then -- Check if it's a Bottom Bun part
+      bottomBun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -1, 0) -- Teleport with downward offset
+      bottomBunCount = bottomBunCount + 1 -- Increment collected Bottom Bun count
+      print("Collected Bottom Bun!") -- Print success message per bun (optional)
+    end
+  end
+
+  if bottomBunCount > 0 then
+    print("Collected", bottomBunCount, "Bottom Buns!") -- Print final collected amount
+  else
+    print("No Bottom Buns found!")
+  end
+end
+
+collectBottomBuns() -- Call the function
