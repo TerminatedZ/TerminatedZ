@@ -1,0 +1,28 @@
+local function collectAllPartsFromBoxes() -- Descriptive function name
+  -- Get all children of the Items folder
+  local boxes = game.Workspace.Entities.Items:GetChildren()
+  local partCount = 0
+
+  for _, box in ipairs(boxes) do
+    if box.Name == "Box" then  -- Check if model name is "Box"
+      -- Get all immediate children of the Box
+      local boxParts = box:GetChildren()
+
+      for _, part in ipairs(boxParts) do
+        if part:IsA("BasePart") then -- Check if it's a valid part
+          local partCFrame = part.CFrame
+          part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+          partCount = partCount + 1
+        end
+      end
+    end
+  end
+
+  if partCount > 0 then
+    print("Collected", partCount, "Parts from Boxes!")
+  else
+    print("No Parts found inside Boxes!")
+  end
+end
+
+collectAllPartsFromBoxes()  -- Call the function
