@@ -1,0 +1,27 @@
+local function collectAllPartsFromFries()
+    -- Get all children of the Items folder
+    local fries = game.Workspace.Entities.Items:GetChildren()
+    local partCount = 0
+  
+    for _, fry in ipairs(fries) do
+      if fry.Name == "Fries" then
+        -- Get all immediate children of the Fries object
+        local fryParts = fry:GetChildren()
+        
+        for _, part in ipairs(fryParts) do
+          if part:IsA("BasePart") then -- Check if it's a valid part
+            local partCFrame = part.CFrame
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            partCount = partCount + 1
+          end
+        end
+      end
+    end
+  
+    if partCount > 0 then
+      print("Collected", partCount, "Parts from Fries!")
+    else
+      print("No Parts found inside Fries!")
+    end
+  end
+collectAllPartsFromFries()
