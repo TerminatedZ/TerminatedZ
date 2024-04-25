@@ -1,3 +1,10 @@
+		local args = {
+    	[1] = workspace.Entities.Characters.Creatures.Cats.Cat
+	}
+
+
+
+
 local function collectCatParts() -- Descriptive function name
     -- Target location for Cat models (modify the path if needed)
     local catLocation = game.Workspace.Entities.Characters.Creatures.Cats 
@@ -14,7 +21,8 @@ local function collectCatParts() -- Descriptive function name
         for _, part in ipairs(catParts) do
           if part:IsA("BasePart") then -- Check if it's a valid part
             local partCFrame = part.CFrame -- Get the current part's CFrame
-            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame-- Teleport to player's position
+            game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
             partCount = partCount + 1 -- Increment collected part count
           end
         end
