@@ -5,16 +5,15 @@ local Window = OrionLib:MakeWindow({Name = "Cook Burgers", HidePremium = false, 
 local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
 
 
+local safeSpotPlatform = Instance.new("Part")
 
--- Values
-_G.safeSpot = true
+safeSpotPlatform.Position = Vector3.new(6999, 1010, -570)
+safeSpotPlatform.Transparency = 0.6
+safeSpotPlatform.Size = Vector3.new(12, 1, 12)
+safeSpotPlatform.Anchored = true
 
+safeSpotPlatform.Parent = game.Workspace
 
-function safeSpot()
-	while _G.safeSpot == true do
-		game.Players.LocalPlayer.CFrame = CFrame.new(-17, 67, -246)
-	end
-end
 
 
 
@@ -412,15 +411,12 @@ farmTab:AddButton({
   	end    
 })
 
-farmTab:AddToggle({
+farmTab:AddButton({
 	Name = "Safe Spot for AFK",
-	Default = false,
-	Callback = function(Value)
-		_G.safeSpot = Value
-		safeSpot()
-	end    
+	Callback = function()
+		Player.CFrame = CFrame.new(6999, 1011, -570)
+  	end    
 })
-
 
 
 
