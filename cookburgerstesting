@@ -40,6 +40,13 @@ local teleportTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local miscTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
 
 -- Sections
 local Section = potionsTab:AddSection({
@@ -605,6 +612,43 @@ teleportTab:AddButton({
 	Name = "Bring All Ketchup",
 	Callback = function()
 		Ketchup()
+  	end    
+})
+
+miscTab:AddButton({
+	Name = "Order Meat and Cheese",
+	Callback = function()
+		workspace.Restaurant.IngredientsOrderScreens.MainScreen.OrderButton2.ContextAction:FireServer()
+  	end    
+})
+
+miscTab:AddButton({
+	Name = "Order Buns",
+	Callback = function()
+		workspace.Restaurant.IngredientsOrderScreens.MainScreen.OrderButton1.ContextAction:FireServer()
+  	end    
+})
+
+miscTab:AddButton({
+	Name = "Order Salad",
+	Callback = function()
+		workspace.Restaurant.IngredientsOrderScreens.MainScreen.OrderButton3.ContextAction:FireServer()
+  	end    
+})
+
+miscTab:AddButton({
+	Name = "Order Fries",
+	Callback = function()
+		workspace.Restaurant.IngredientsOrderScreens.FreezerScreen.OrderButton4.ContextAction:FireServer()
+  	end    
+})
+
+
+
+miscTab:AddButton({
+	Name = "Flip GigaMagnet Switch",
+	Callback = function()
+		workspace.Gameplay.GigaMagnet.Lever.Switch.ContextAction:FireServer()
   	end    
 })
 
