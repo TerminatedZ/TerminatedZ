@@ -1,3 +1,9 @@
+		local args = {
+    	[1] = workspace.Entities.Items.Steak
+	}
+
+
+
 local function collectSteaks()
     local steaks = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
     local steakCount = 0  -- Counter to track collected Steaks
@@ -6,6 +12,7 @@ local function collectSteaks()
       if steak.Name == "Steak" then  -- Check if it's a Steak part
         steakCFrame = steak.CFrame  -- Get the current Steak's CFrame
         steak.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
         steakCount = steakCount + 1  -- Increment collected Steak count
       end
     end
