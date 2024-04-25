@@ -1,3 +1,9 @@
+		local args = {
+    	[1] = workspace.Entities.Items.Salad
+	}
+
+
+
 local function collectSalads()  -- Renamed function to plural for clarity
     local salads = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
     local saladCount = 0  -- Counter to track collected Salads
