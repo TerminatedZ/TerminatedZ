@@ -41,7 +41,7 @@ local teleportTab = Window:MakeTab({
 })
 
 local miscTab = Window:MakeTab({
-	Name = "Teleports",
+	Name = "Miscellaneous",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -663,7 +663,7 @@ miscTab:AddButton({
 miscTab:AddButton({
 	Name = "Flip Sewer Bridge Switch",
 	Callback = function()
-		workspace.Gameplay.GigaMagnet.Lever.Switch.ContextAction:FireServer()
+		workspace.Terrain.Map.BridgeLever.Switch.ContextAction:FireServer()
   	end    
 })
 
