@@ -415,7 +415,7 @@ farmTab:AddButton({
 farmTab:AddButton({
 	Name = "AFK Place",
 	Callback = function()
-		antiAFK()
+		safeSpot()
   	end    
 })
 
