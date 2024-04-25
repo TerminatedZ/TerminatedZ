@@ -1,0 +1,404 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Cook Burgers", HidePremium = false, SaveConfig = true, ConfigFolder = "CookBurgers"})
+
+
+
+function TopBuns()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringtopbuns",true))()
+end
+
+function Cheese()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcheese",true))()
+end
+
+function Steak()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringsteaks",true))()   
+end
+
+function Salad()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringsalad",true))()
+end
+
+function BottomBuns()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringbottombuns",true))()
+end
+
+function Fries()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringfries",true))()
+end
+
+function Ketchup()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringketchups",true))()
+end
+
+function Mustard()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmustard",true))()
+end
+
+function Plates()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringplates",true))()	
+end
+
+function Boxes()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringboxes",true))()
+end
+
+function RemainingCardboard()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringremainingcardboard",true))()
+end
+
+function Microwave()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmicrowave",true))()
+end
+
+function Bells()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringbells",true))()
+end
+
+function Extinguishers()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringextinguisher",true))()
+end
+
+function Potions()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringpotions",true))()
+end
+
+function Rats()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringrats",true))()
+end
+
+function Cats()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcats",true))()
+end
+
+function Seagulls()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringseagulls",true))()
+end
+
+function Customers()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcustomers",true))()
+end
+
+function autoMoney()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/automoney",true))()
+end
+
+function Money()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmoney",true))()
+end
+
+
+
+
+
+-- Positions
+local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+
+-- Tabs
+local farmTab = Window:MakeTab({
+	Name = "Autofarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local potionsTab = Window:MakeTab({
+	Name = "Potions",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local teleportTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+-- Sections
+local Section = potionsTab:AddSection({
+	Name = "ONLY WORKS IF THE POTION EXISTS"
+})
+
+local Section = teleportTab:AddSection({
+	Name = "Place Teleports"
+})
+
+
+
+
+-- Buttons
+
+potionsTab:AddButton({
+	Name = "Green Potion (RAT)",
+	Callback = function()
+      	workspace.Entities.Items.Potion.ContextAction:FireServer()
+  	end    
+})
+
+
+potionsTab:AddButton({
+	Name = "Purple Potion (CAT)",
+	Callback = function()
+		workspace.Entities.Items.CatPotion.ContextAction:FireServer()
+  	end    
+})
+
+
+
+potionsTab:AddButton({
+	Name = "Orange Potion (SPECIAL RAT)",
+	Callback = function()
+		workspace.Entities.Items.OrangePotion.ContextAction:FireServer()
+  	end    
+})
+
+
+
+teleportTab:AddButton({
+	Name = "Restaurant",
+	Callback = function()
+		Player.CFrame = CFrame.new(-25, 85, -270)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Kitchen",
+	Callback = function()
+		Player.CFrame = CFrame.new(-38, 86, -362)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Sewers",
+	Callback = function()
+		Player.CFrame = CFrame.new(57, 70, -901)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Potion Room",
+	Callback = function()
+		Player.CFrame = CFrame.new(-36, 66, -844)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -177)
+  	end    
+})
+
+
+
+teleportTab:AddButton({
+	Name = "Secret Room Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -117)
+  	end    
+})
+
+
+
+teleportTab:AddButton({
+	Name = "Bakery",
+	Callback = function()
+		Player.CFrame = CFrame.new(22, 87, -181)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Forklifts",
+	Callback = function()
+		Player.CFrame = CFrame.new(-145, 85, -61)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Basketball Court",
+	Callback = function()
+		Player.CFrame = CFrame.new(117, 86, -552)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "VR Spawn",
+	Callback = function()
+		Player.CFrame = CFrame.new(310, 112, -53)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Area",
+	Callback = function()
+		Player.CFrame = CFrame.new(329, 95, -170)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "AMONG US",
+	Callback = function()
+		Player.CFrame = CFrame.new(-146, 116, -489)
+  	end    
+})
+
+
+local Section = teleportTab:AddSection({
+	Name = "Item Teleporters"
+})
+
+
+teleportTab:AddButton({
+	Name = "Bring All TopBuns",
+	Callback = function()
+		TopBuns()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cheese",
+	Callback = function()
+		Cheese()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Steak",
+	Callback = function()
+		Steak()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Salad",
+	Callback = function()
+		Salad()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All BottomBuns",
+	Callback = function()
+		BottomBuns()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Fries",
+	Callback = function()
+		Fries()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Ketchup",
+	Callback = function()
+		Ketchup()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Mustard",
+	Callback = function()
+		Mustard()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Plates",
+	Callback = function()
+		Plates()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Money",
+	Callback = function()
+		Money()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Boxes",
+	Callback = function()
+		Boxes()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cardboard",
+	Callback = function()
+		RemainingCardboard()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Microwave",
+	Callback = function()
+		Microwave()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Bells",
+	Callback = function()
+		Bells()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Exinguishers",
+	Callback = function()
+		Extinguishers()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Potions",
+	Callback = function()
+		Potions()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Rats",
+	Callback = function()
+		Rats()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cats",
+	Callback = function()
+		Cats()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Seagulls",
+	Callback = function()
+		Seagulls()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Customers (WALKING)",
+	Callback = function()
+		Customers()
+  	end    
+})
+
+
+farmTab:AddButton({
+	Name = "Auto Collect Money",
+	Callback = function()
+		autoMoney()
+  	end    
+})
+
+
+
+
+
+OrionLib:Init()
