@@ -1,3 +1,10 @@
+		local args = {
+    	[1] = workspace.Entities.Items.Potion
+	}
+
+
+
+
 local function collectAllPartsFromPotions()
     -- Get all children of the Items folder
     local potions = game.Workspace.Entities.Items:GetChildren()
@@ -12,6 +19,7 @@ local function collectAllPartsFromPotions()
           if part:IsA("BasePart") then -- Check if it's a valid part
             local partCFrame = part.CFrame
             part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
             partCount = partCount + 1
           end
         end
