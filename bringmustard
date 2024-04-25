@@ -1,3 +1,9 @@
+		local args = {
+    	[1] = workspace.Entities.Items.Mustard
+	}
+
+
+
 local function collectMustards() -- Renamed function to plural for clarity
     local mustards = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
     local mustardCount = 0 -- Counter to track collected Mustards
@@ -6,6 +12,7 @@ local function collectMustards() -- Renamed function to plural for clarity
       if mustard.Name == "Mustard" then -- Check if it's a Mustard part
         local mustardCFrame = mustard.CFrame -- Get the current Mustard's CFrame
         mustard.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+        game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
         mustardCount = mustardCount + 1 -- Increment collected Mustard count
       end
     end
