@@ -192,14 +192,6 @@ teleportTab:AddButton({
 
 
 
-teleportTab:AddButton({
-	Name = "Secret Room Supermarket",
-	Callback = function()
-		Player.CFrame = CFrame.new(114, 86, -117)
-  	end    
-})
-
-
 
 teleportTab:AddButton({
 	Name = "Bakery",
@@ -233,6 +225,13 @@ teleportTab:AddButton({
 	Name = "Secret Area",
 	Callback = function()
 		Player.CFrame = CFrame.new(329, 95, -170)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Room Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -117)
   	end    
 })
 
