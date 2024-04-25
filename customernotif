@@ -1,0 +1,31 @@
+local function checkCustomer()
+    if Customer.isCritic then
+        game:GetService("StarterGui"):SetCore("SendNotification",{
+            Title = "Critic Detected", -- Required
+            Text = "A Critic was detected walking", -- Required
+            Icon = "rbxassetid://1234567890" -- Optional
+        })
+    else
+        game:GetService("StarterGui"):SetCore("SendNotification",{
+            Title = "Customer", -- Required
+            Text = "A Customer was detected walking", -- Required
+            Icon = "rbxassetid://1234567890" -- Optional
+        })
+    end
+  end
+  
+  -- Function to repeatedly call the check every second
+  local function checkCustomerLoop()
+    checkCustomer()
+    wait(1) -- Wait for one second before calling again
+    script.Parent:Tween("Loop", { -- Optional visual indicator (optional)
+      Duration = 1,
+      Alpha = 0.5, -- Set transparency
+      Loops = math.huge, -- Loop forever
+    })
+    script.Parent:TweenCancel("Loop") -- Cancel any existing loop animation
+  end
+  
+  -- Start the loop (optional visual indicator can be removed)
+  checkCustomerLoop()
+  
