@@ -291,12 +291,6 @@ teleportTab:AddButton({
   	end    
 })
 
-teleportTab:AddButton({
-	Name = "Bring All Ketchup",
-	Callback = function()
-		Ketchup()
-  	end    
-})
 
 teleportTab:AddButton({
 	Name = "Bring All Mustard",
@@ -398,7 +392,12 @@ farmTab:AddButton({
 })
 
 
-
+teleportTab:AddButton({
+	Name = "Bring All Ketchup",
+	Callback = function()
+		Ketchup()
+  	end    
+})
 
 
 OrionLib:Init()
