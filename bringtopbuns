@@ -1,6 +1,3 @@
-		local args = {
-    	[1] = workspace.Entities.Items.Top Bun
-	}
 
 
 
@@ -12,7 +9,6 @@ local function collectTopBuns()
       if topBun.Name == "Top Bun" then  -- Check if it's a Top Bun part
         topBunCFrame = topBun.CFrame  -- Get the current Top Bun's CFrame
         topBun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
-        game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
         topBunCount = topBunCount + 1  -- Increment collected Top Bun count
       end
     end
