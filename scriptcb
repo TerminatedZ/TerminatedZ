@@ -190,14 +190,11 @@ teleportTab:AddButton({
   	end    
 })
 
-
-
-
 teleportTab:AddButton({
 	Name = "Bakery",
 	Callback = function()
 		Player.CFrame = CFrame.new(22, 87, -181)
-  	end    
+  	end
 })
 
 teleportTab:AddButton({
