@@ -3,89 +3,6 @@ local Window = OrionLib:MakeWindow({Name = "Cook Burgers", HidePremium = false, 
 
 
 
-function TopBuns()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringtopbuns",true))()
-end
-
-function Cheese()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcheese",true))()
-end
-
-function Steak()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringsteaks",true))()   
-end
-
-function Salad()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringsalad",true))()
-end
-
-function BottomBuns()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringbottombuns",true))()
-end
-
-function Fries()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringfries",true))()
-end
-
-function Ketchup()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringketchups",true))()
-end
-
-function Mustard()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmustard",true))()
-end
-
-function Plates()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringplates",true))()	
-end
-
-function Boxes()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringboxes",true))()
-end
-
-function RemainingCardboard()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringremainingcardboard",true))()
-end
-
-function Microwave()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmicrowave",true))()
-end
-
-function Bells()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringbells",true))()
-end
-
-function Extinguishers()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringextinguisher",true))()
-end
-
-function Potions()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringpotions",true))()
-end
-
-function Rats()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringrats",true))()
-end
-
-function Cats()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcats",true))()
-end
-
-function Seagulls()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringseagulls",true))()
-end
-
-function Customers()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcustomers",true))()
-end
-
-function autoMoney()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/automoney",true))()
-end
-
-function Money()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmoney",true))()
-end
 
 
 
@@ -243,6 +160,90 @@ teleportTab:AddButton({
 local Section = teleportTab:AddSection({
 	Name = "Item Teleporters"
 })
+
+function TopBuns()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringtopbuns",true))()
+end
+
+function Cheese()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcheese",true))()
+end
+
+function Steak()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringsteaks",true))()   
+end
+
+function Salad()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringsalad",true))()
+end
+
+function BottomBuns()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringbottombuns",true))()
+end
+
+function Fries()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringfries",true))()
+end
+
+function Ketchup()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringketchups",true))()
+end
+
+function Mustard()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmustard",true))()
+end
+
+function Plates()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringplates",true))()	
+end
+
+function Boxes()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringboxes",true))()
+end
+
+function RemainingCardboard()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringremainingcardboard",true))()
+end
+
+function Microwave()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmicrowave",true))()
+end
+
+function Bells()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringbells",true))()
+end
+
+function Extinguishers()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringextinguisher",true))()
+end
+
+function Potions()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringpotions",true))()
+end
+
+function Rats()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringrats",true))()
+end
+
+function Cats()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcats",true))()
+end
+
+function Seagulls()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringseagulls",true))()
+end
+
+function Customers()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcustomers",true))()
+end
+
+function autoMoney()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/automoney",true))()
+end
+
+function Money()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmoney",true))()
+end
 
 
 teleportTab:AddButton({
