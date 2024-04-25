@@ -1,3 +1,8 @@
+		local args = {
+    	[1] = workspace.Entities.Items.Ketchup
+	}
+
+
 local function collectKetchups() -- Renamed function to plural for clarity
     local ketchups = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
     local ketchupCount = 0 -- Counter to track collected Ketchups
@@ -6,6 +11,7 @@ local function collectKetchups() -- Renamed function to plural for clarity
       if ketchup:IsA("BasePart") and ketchup.Name == "Ketchup" then -- Check if it's a BasePart named Ketchup
         local ketchupCFrame = ketchup.CFrame -- Get the current Ketchup's CFrame
         ketchup.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+        game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
         ketchupCount = ketchupCount + 1 -- Increment collected Ketchup count
       end
     end
