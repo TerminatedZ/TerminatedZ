@@ -1,0 +1,33 @@
+local args = {
+  [1] = workspace.Entities.Items.CatPotion  -- Target CatPotion model
+}
+
+local function collectAllPartsFromCatPotions()
+  -- Get all children of the Items folder
+  local potions = game.Workspace.Entities.Items:GetChildren()
+  local partCount = 0
+
+  for _, potion in ipairs(potions) do
+    if potion.Name == "CatPotion" then  -- Check for "CatPotion" specifically
+      -- Get all immediate children of the CatPotion
+      local potionParts = potion:GetChildren()
+
+      for _, part in ipairs(potionParts) do
+        if part:IsA("BasePart") then -- Check if it's a valid part
+          local partCFrame = part.CFrame
+          part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+          game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
+          partCount = partCount + 1
+        end
+      end
+    end
+  end
+
+  if partCount > 0 then
+    print("Collected", partCount, "Parts from CatPotions!")
+  else
+    print("No Parts found inside CatPotions!")
+  end
+end
+
+collectAllPartsFromCatPotions()
