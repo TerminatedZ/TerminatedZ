@@ -23,11 +23,11 @@ local function waitAndTeleportMoney() -- Descriptive function name
     else
       -- Error handling and wait
       print("Money part not found, waiting...")
-      wait(1)
+      wait(0.3)
     end
 
     -- Loop back to check again (modify wait time if needed)
-    wait(1) -- Adjust wait time between checks (optional)
+    wait(0.3) -- Adjust wait time between checks (optional)
     checkForMoney() -- Call itself recursively to keep checking
   end
 
