@@ -1,0 +1,51 @@
+		local args = {
+    	[1] = workspace.Entities.Characters.Creatures.Rats:FindFirstChild("Mole")
+	}
+
+
+
+
+
+local function collectPartsFromMoleRat() -- Descriptive function name
+  -- Target location for Rat models (modify the path if needed)
+  local ratLocation = game.Workspace.Entities.Characters.Creatures.Rats  -- Assuming Rats are under Creatures
+
+  -- Find the specific Rat model named "Mole"
+  local moleRat = ratLocation:FindFirstChild("Mole")
+  
+  -- Check if the Rat model exists
+  if moleRat and moleRat:IsA("Model") then
+    -- Loop through all children of the Rat model (these are parts)
+    for _, child in ipairs(moleRat:GetChildren()) do
+      -- Collect all BaseParts within the model, including nested models
+      if child:IsA("BasePart") then
+        local partCFrame = child.CFrame -- Get the current part's CFrame
+        child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0) -- Teleport with vertical offset
+        game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
+        print("Collected", child.Name, "from Mole Rat!") -- Print collected part name (optional)
+      elseif child:IsA("Model") then
+        collectPartsFromModel(child) -- Recursive call for nested models
+      end
+    end
+  else
+    print("Mole Rat model not found!")
+  end
+end
+
+-- Helper function for collecting parts from nested models (optional)
+local function collectPartsFromModel(model)
+  for _, child in ipairs(model:GetChildren()) do
+    if child:IsA("BasePart") then
+      local partCFrame = child.CFrame -- Get the current part't CFrame
+      child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0) -- Teleport with vertical offset
+      game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
+      print("Collected", child.Name, "from nested model in Mole Rat!") -- Print collected part name (optional)
+    elseif child:IsA("Model") then
+      collectPartsFromModel(child) -- Recursive call for even deeper nesting
+    end
+  end
+end
+
+-- **Optional: Call the function when needed**
+-- (Replace with your event connection or trigger point)
+collectPartsFromMoleRat()
