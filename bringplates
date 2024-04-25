@@ -1,3 +1,9 @@
+		local args = {
+    	[1] = workspace.Entities.Items.Plate
+	}
+
+
+
 local function collectPlates()
     local plates = game.Workspace.Entities.Items:GetChildren()  -- Get all children of Items folder
     local plateCount = 0  -- Counter to track collected Plates
@@ -6,6 +12,7 @@ local function collectPlates()
       if plate.Name == "Plate" then  -- Check if it's a Plate part
         plateCFrame = plate.CFrame  -- Get the current Plate's CFrame
         plate.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  -- Teleport to player's position
+        game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
         plateCount = plateCount + 1  -- Increment collected Plate count
       end
     end
