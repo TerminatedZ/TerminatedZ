@@ -1,7 +1,8 @@
 local safeSpotPlatform = Instance.new("Part")
 
-safeSpotPlatform.Position = 6999, 1010, -570
+safeSpotPlatform.Position = Vector3.new(6999, 1010, -570)
 safeSpotPlatform.Transparency = 0.6
 safeSpotPlatform.Size = Vector3.new(12, 1, 12)
+safeSpotPlatform.Anchored = true
 
 safeSpotPlatform.Parent = game.Workspace
