@@ -1,3 +1,9 @@
+		local args = {
+    	[1] = workspace.Entities.Items.Bottom Bun
+	}
+
+
+
 local function collectBottomBuns() -- Descriptive function name
   local bottomBuns = game.Workspace.Entities.Items:GetChildren() -- Get all children of Items folder
   local bottomBunCount = 0 -- Counter to track collected Bottom Buns
@@ -5,6 +11,7 @@ local function collectBottomBuns() -- Descriptive function name
   for _, bottomBun in ipairs(bottomBuns) do -- Loop through each child
     if bottomBun.Name == "Bottom Bun" then -- Check if it's a Bottom Bun part
       bottomBun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -1, 0) -- Teleport with downward offset
+      game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
       bottomBunCount = bottomBunCount + 1 -- Increment collected Bottom Bun count
       print("Collected Bottom Bun!") -- Print success message per bun (optional)
     end
