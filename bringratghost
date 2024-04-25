@@ -1,0 +1,32 @@
+		local args = {
+    	[1] = workspace.Entities.Characters.Creatures.Rats:FindFirstChild("Ghost")
+	}
+
+
+
+
+local function collectPartsFromGhostRat() -- Descriptive function name
+  -- Target location for Rat models (modify the path if needed)
+  local ratLocation = game.Workspace.Entities.Characters.Creatures.Rats  -- Assuming Rats are under Creatures
+
+  -- Find the specific Rat model named "Ghost"
+  local ghostRat = ratLocation:FindFirstChild("Ghost")
+  
+  -- Check if the Rat model exists
+  if ghostRat and ghostRat:IsA("Model") then
+    -- Loop through all children of the Rat model (these are parts)
+    for _, child in ipairs(ghostRat:GetChildren()) do
+      if child:IsA("BasePart") then
+        local partCFrame = child.CFrame -- Get the current part's CFrame
+        game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args)) -- Teleport with vertical offset
+        print("Collected", child.Name, "from Ghost Rat!") -- Print collected part name (optional)
+      end
+    end
+  else
+    print("Ghost Rat model not found!")
+  end
+end
+
+-- **Optional: Call the function when needed**
+-- (Replace with your event connection or trigger point)
+collectPartsFromGhostRat()
