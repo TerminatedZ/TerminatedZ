@@ -6,15 +6,14 @@ local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
 
 
 
--- Values
-_G.safeSpot = true
+local safeSpotPlatform = Instance.new("Part")
 
+safeSpotPlatform.Position = Vector3.new(6999, 1010, -570)
+safeSpotPlatform.Transparency = 0.6
+safeSpotPlatform.Size = Vector3.new(12, 1, 12)
+safeSpotPlatform.Anchored = true
 
-function safeSpot()
-	while _G.safeSpot == true do
-		player.CFrame = CFrame.new(-17, 67, -246)
-	end
-end
+safeSpotPlatform.Parent = game.Workspace
 
 
 
@@ -413,11 +412,12 @@ farmTab:AddButton({
 })
 
 farmTab:AddButton({
-	Name = "AFK Place",
+	Name = "Safe Spot for AFK",
 	Callback = function()
-		safeSpot()
+		Player.CFrame = CFrame.new(6999, 1011, -570)
   	end    
 })
+
 
 
 
