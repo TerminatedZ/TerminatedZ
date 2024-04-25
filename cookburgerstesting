@@ -41,7 +41,7 @@ local teleportTab = Window:MakeTab({
 })
 
 local miscTab = Window:MakeTab({
-	Name = "Miscellaneous",
+	Name = "Teleports",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -91,84 +91,92 @@ potionsTab:AddButton({
 teleportTab:AddButton({
 	Name = "Restaurant",
 	Callback = function()
-		Player.CFrame = CFrame.new(-25, 85, -270)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25, 85, -270)
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Kitchen",
 	Callback = function()
-		Player.CFrame = CFrame.new(-38, 86, -362)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-38, 86, -362)
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Sewers",
 	Callback = function()
-		Player.CFrame = CFrame.new(57, 70, -901)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(57, 70, -901)
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Potion Room",
 	Callback = function()
-		Player.CFrame = CFrame.new(-36, 66, -844)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-36, 66, -844)
   	end    
 })
 
 teleportTab:AddButton({
+	Name = "Rat Quest Room",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(30, 112, -1133)
+  	end    
+})
+
+
+teleportTab:AddButton({
 	Name = "Supermarket",
 	Callback = function()
-		Player.CFrame = CFrame.new(114, 86, -177)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(114, 86, -177)
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Bakery",
 	Callback = function()
-		Player.CFrame = CFrame.new(22, 87, -181)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22, 87, -181)
   	end
 })
 
 teleportTab:AddButton({
 	Name = "Forklifts",
 	Callback = function()
-		Player.CFrame = CFrame.new(-145, 85, -61)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-145, 85, -61)
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Basketball Court",
 	Callback = function()
-		Player.CFrame = CFrame.new(117, 86, -552)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(117, 86, -552)
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "VR Spawn",
 	Callback = function()
-		Player.CFrame = CFrame.new(310, 112, -53)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(310, 112, -53)
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Secret Area",
 	Callback = function()
-		Player.CFrame = CFrame.new(329, 95, -170)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(329, 95, -170)
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "Secret Room Supermarket",
 	Callback = function()
-		Player.CFrame = CFrame.new(114, 86, -117)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(114, 86, -117)
   	end    
 })
 
 teleportTab:AddButton({
 	Name = "AMONG US",
 	Callback = function()
-		Player.CFrame = CFrame.new(-146, 116, -489)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-146, 116, -489)
   	end    
 })
 
@@ -651,6 +659,14 @@ miscTab:AddButton({
 		workspace.Gameplay.GigaMagnet.Lever.Switch.ContextAction:FireServer()
   	end    
 })
+
+miscTab:AddButton({
+	Name = "Flip Sewer Bridge Switch",
+	Callback = function()
+		workspace.Gameplay.GigaMagnet.Lever.Switch.ContextAction:FireServer()
+  	end    
+})
+
 
 
 OrionLib:Init()
