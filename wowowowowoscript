@@ -5,6 +5,7 @@ local Window = OrionLib:MakeWindow({Name = "Cook Burgers", HidePremium = false, 
 local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
 
 
+
 local safeSpotPlatform = Instance.new("Part")
 
 safeSpotPlatform.Position = Vector3.new(6999, 1010, -570)
@@ -13,7 +14,6 @@ safeSpotPlatform.Size = Vector3.new(12, 1, 12)
 safeSpotPlatform.Anchored = true
 
 safeSpotPlatform.Parent = game.Workspace
-
 
 
 
@@ -207,7 +207,7 @@ function Potions()
 end
 
 
-function Extinguishers()
+function Extinguisher()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringextinguisher",true))()
 end
 
@@ -263,7 +263,7 @@ end
 
 
 teleportTab:AddButton({
-	Name = "Bring All TopBuns",
+	Name = "Bring All Top Buns",
 	Callback = function()
 		TopBuns()
   	end    
@@ -355,9 +355,9 @@ teleportTab:AddButton({
 })
 
 teleportTab:AddButton({
-	Name = "Bring All Exinguishers",
+	Name = "Bring All Fire Exinguishers",
 	Callback = function()
-		Extinguishers()
+		Extinguisher()
   	end    
 })
 
@@ -417,6 +417,7 @@ farmTab:AddButton({
 		Player.CFrame = CFrame.new(6999, 1011, -570)
   	end    
 })
+
 
 
 
