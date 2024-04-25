@@ -12,7 +12,7 @@ _G.safeSpot = true
 
 function safeSpot()
 	while _G.safeSpot == true do
-		player.CFrame = CFrame.new(-17, 67, -246)
+		game.Players.LocalPlayer.CFrame = CFrame.new(-17, 67, -246)
 	end
 end
 
