@@ -1,6 +1,6 @@
 
 		local args = {
-    	[1] = workspace.Entities.Characters.Creatures.Rats:FindFirstChild("Rémi")
+    	[1] = workspace.Entities.Characters.Creatures.Rats:FindFirstChild("Ghost")
 	}
 
 
