@@ -1,0 +1,26 @@
+local function bringRemainingCardboardParts() -- Descriptive function name
+  -- Target location for RemainingCardboard parts (modify if needed)
+  local cardboardLocation = game.Workspace.Entities.Items:FindFirstChild("RemainingCardboard")
+
+  if cardboardLocation then
+    local collectedParts = 0 -- Counter to track collected parts
+
+    for _, part in ipairs(cardboardLocation:GetChildren()) do -- Loop through children
+      if part:IsA("BasePart") then -- Check if it's a valid part
+        part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 1, 0) -- Teleport with offset
+        collectedParts = collectedParts + 1
+      end
+    end
+
+    if collectedParts > 0 then
+      print("Brought", collectedParts, "Parts from RemainingCardboard!")
+    else
+      print("No Parts found in RemainingCardboard!")
+    end
+  else
+    print("RemainingCardboard not found!")
+  end
+end
+
+-- Call the function (replace with your desired trigger event)
+bringRemainingCardboardParts()  -- Uncomment to run the script automatically
