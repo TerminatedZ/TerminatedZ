@@ -1,0 +1,612 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Cook Burgers", HidePremium = false, SaveConfig = true, ConfigFolder = "CookBurgers"})
+
+
+local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+
+
+local safeSpotPlatform = Instance.new("Part")
+
+safeSpotPlatform.Position = Vector3.new(6999, 1010, -570)
+safeSpotPlatform.Transparency = 0.6
+safeSpotPlatform.Size = Vector3.new(12, 1, 12)
+safeSpotPlatform.Anchored = true
+
+safeSpotPlatform.Parent = game.Workspace
+
+
+
+-- Positions
+local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+
+-- Tabs
+local farmTab = Window:MakeTab({
+	Name = "Autofarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local potionsTab = Window:MakeTab({
+	Name = "Potions",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local teleportTab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+-- Sections
+local Section = potionsTab:AddSection({
+	Name = "ONLY WORKS IF THE POTION EXISTS"
+})
+
+local Section = teleportTab:AddSection({
+	Name = "Place Teleports"
+})
+
+
+
+
+-- Buttons
+
+potionsTab:AddButton({
+	Name = "Green Potion (RAT)",
+	Callback = function()
+      	workspace.Entities.Items.Potion.ContextAction:FireServer()
+  	end    
+})
+
+
+potionsTab:AddButton({
+	Name = "Purple Potion (CAT)",
+	Callback = function()
+		workspace.Entities.Items.CatPotion.ContextAction:FireServer()
+  	end    
+})
+
+
+
+potionsTab:AddButton({
+	Name = "Orange Potion (SPECIAL RAT)",
+	Callback = function()
+		workspace.Entities.Items.OrangePotion.ContextAction:FireServer()
+  	end    
+})
+
+
+
+teleportTab:AddButton({
+	Name = "Restaurant",
+	Callback = function()
+		Player.CFrame = CFrame.new(-25, 85, -270)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Kitchen",
+	Callback = function()
+		Player.CFrame = CFrame.new(-38, 86, -362)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Sewers",
+	Callback = function()
+		Player.CFrame = CFrame.new(57, 70, -901)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Potion Room",
+	Callback = function()
+		Player.CFrame = CFrame.new(-36, 66, -844)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -177)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bakery",
+	Callback = function()
+		Player.CFrame = CFrame.new(22, 87, -181)
+  	end
+})
+
+teleportTab:AddButton({
+	Name = "Forklifts",
+	Callback = function()
+		Player.CFrame = CFrame.new(-145, 85, -61)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Basketball Court",
+	Callback = function()
+		Player.CFrame = CFrame.new(117, 86, -552)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "VR Spawn",
+	Callback = function()
+		Player.CFrame = CFrame.new(310, 112, -53)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Area",
+	Callback = function()
+		Player.CFrame = CFrame.new(329, 95, -170)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Secret Room Supermarket",
+	Callback = function()
+		Player.CFrame = CFrame.new(114, 86, -117)
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "AMONG US",
+	Callback = function()
+		Player.CFrame = CFrame.new(-146, 116, -489)
+  	end    
+})
+
+
+local Section = teleportTab:AddSection({
+	Name = "Item Teleporters"
+})
+
+function TopBuns()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringtopbuns",true))()
+end
+
+function Cheese()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcheese",true))()
+end
+
+function Steak()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringsteaks",true))()   
+end
+
+function Salad()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringsalad",true))()
+end
+
+function BottomBuns()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringbottombuns",true))()
+end
+
+function Fries()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringfries",true))()
+end
+
+function Ketchup()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringketchups",true))()
+end
+
+function Mustard()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmustard",true))()
+end
+
+function Potions()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringpotions",true))()
+end
+
+
+function Extinguisher()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringextinguisher",true))()
+end
+
+
+function antiAFK()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/NOT%20MY%20SCRIPT%20TOO",true))()
+end
+
+
+function Rats()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringrats",true))()
+end
+
+function Cats()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcats",true))()
+end
+
+function Seagulls()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringseagulls",true))()
+end
+
+function Customers()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringcustomers",true))()
+end
+
+function autoMoney()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/automoney",true))()
+end
+
+function Money()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmoney",true))()
+end
+
+function Plates()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringplates",true))()	
+end
+
+function Boxes()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringboxes",true))()
+end
+
+function RemainingCardboard()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringremainingcardboard",true))()
+end
+
+function Microwave()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmicrowave",true))()
+end
+
+function Bells()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringbells",true))()
+end
+
+function ratCommonDark()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratcommondark",true))()
+end
+
+function ratCommonLight()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratscommonlight",true))()
+end
+
+function ratAlbino()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratsalbino",true))()
+end
+
+function ratRemi()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratsremi",true))()
+end
+
+function ratBat()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratbat",true))()
+end
+
+function ratButterfly()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratbutterfly",true))()
+end
+
+function ratDragon()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratdragon",true))()
+end
+
+function ratUFO()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringUFOrat",true))()
+end
+
+function ratClockwork()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratclockwork",true))()
+end
+
+function ratTurtle()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratturtle",true))()
+end
+
+function ratMole()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratmole",true))()
+end
+
+function ratSnowy()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratsnow",true))()
+end
+
+function ratGhost()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratghost",true))()
+end
+
+function ratPikachu()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratpikachu",true))()
+end
+
+function ratNinja()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratninja",true))()
+end
+
+function ratSoap()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratsoap",true))()
+end
+
+function ratSquirrel
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratsquirrel",true))()
+end
+
+teleportTab:AddButton({
+	Name = "Bring All Top Buns",
+	Callback = function()
+		TopBuns()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cheese",
+	Callback = function()
+		Cheese()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Steak",
+	Callback = function()
+		Steak()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Salad",
+	Callback = function()
+		Salad()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All BottomBuns",
+	Callback = function()
+		BottomBuns()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Fries",
+	Callback = function()
+		Fries()
+  	end    
+})
+
+
+teleportTab:AddButton({
+	Name = "Bring All Mustard",
+	Callback = function()
+		Mustard()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Plates",
+	Callback = function()
+		Plates()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Money",
+	Callback = function()
+		Money()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Boxes",
+	Callback = function()
+		Boxes()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cardboard",
+	Callback = function()
+		RemainingCardboard()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Microwave",
+	Callback = function()
+		Microwave()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Bells",
+	Callback = function()
+		Bells()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Fire Exinguishers",
+	Callback = function()
+		Extinguisher()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Potions",
+	Callback = function()
+		Potions()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Common Dark Rats",
+	Callback = function()
+		ratCommonDark()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Common Light Rats",
+	Callback = function()
+		ratCommonLight()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Albino Rats",
+	Callback = function()
+		ratAlbino()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Remi Rats",
+	Callback = function()
+		ratRemi()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Bat Rats",
+	Callback = function()
+		ratBat()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Butterfly Rats",
+	Callback = function()
+		ratButterfly()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Dragon Rats",
+	Callback = function()
+		ratDragon()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring UFO Rats",
+	Callback = function()
+		ratUFO()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Clockwork Rats",
+	Callback = function()
+		ratClockwork()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Turtle Rats",
+	Callback = function()
+		ratTurtle()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Mole Rats",
+	Callback = function()
+		ratMole()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Snowy Rats",
+	Callback = function()
+		ratSnowy()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Ghost Rats",
+	Callback = function()
+		ratGhost()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Pikachu Rats",
+	Callback = function()
+		ratPikachu()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Ninja Rats",
+	Callback = function()
+		ratNinja()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Soapy Rats",
+	Callback = function()
+		ratSoap()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring Squirrel Rats",
+	Callback = function()
+		ratSquirrel()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Cats",
+	Callback = function()
+		Cats()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Seagulls",
+	Callback = function()
+		Seagulls()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Customers (WALKING)",
+	Callback = function()
+		Customers()
+  	end    
+})
+
+
+farmTab:AddButton({
+	Name = "Auto Collect Money",
+	Callback = function()
+		autoMoney()
+  	end    
+})
+
+farmTab:AddButton({
+	Name = "Anti Afk (NOT MY SCRIPT)",
+	Callback = function()
+		antiAFK()
+  	end    
+})
+
+farmTab:AddButton({
+	Name = "Safe Spot for AFK",
+	Callback = function()
+		Player.CFrame = CFrame.new(6999, 1011, -570)
+  	end    
+})
+
+
+
+
+
+teleportTab:AddButton({
+	Name = "Bring All Ketchup",
+	Callback = function()
+		Ketchup()
+  	end    
+})
+
+
+OrionLib:Init()
