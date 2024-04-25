@@ -221,6 +221,10 @@ function Potions()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringpotions",true))()
 end
 
+function orangePotions()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringorangepotions",true))()
+end
+
 
 function Extinguisher()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringextinguisher",true))()
@@ -447,6 +451,13 @@ teleportTab:AddButton({
 	Name = "Bring All Potions",
 	Callback = function()
 		Potions()
+  	end    
+})
+
+teleportTab:AddButton({
+	Name = "Bring All Orange Potions",
+	Callback = function()
+		orangePotions()
   	end    
 })
 
