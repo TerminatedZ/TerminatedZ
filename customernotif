@@ -1,3 +1,7 @@
+
+local Customer = game.Workspace.Entities.Characters.Humans.Customers.Customer
+
+
 local function checkCustomer()
     if Customer.isCritic then
         game:GetService("StarterGui"):SetCore("SendNotification",{
