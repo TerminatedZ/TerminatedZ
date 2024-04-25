@@ -1,3 +1,10 @@
+		local args = {
+    	[1] = workspace.Entities.Characters.Creatures.Rats.Rat
+	}
+
+
+
+
 local function collectRatParts() -- Descriptive function name
     -- Target location for Rat models
     local ratLocation = game.Workspace.Entities.Characters.Creatures.Rats
@@ -15,6 +22,7 @@ local function collectRatParts() -- Descriptive function name
           if part:IsA("BasePart") then -- Check if it's a valid part
             local partCFrame = part.CFrame -- Get the current part's CFrame
             part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame -- Teleport to player's position
+            game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
             partCount = partCount + 1 -- Increment collected part count
           end
         end
