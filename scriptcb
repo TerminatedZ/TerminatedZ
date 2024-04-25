@@ -193,107 +193,19 @@ function Mustard()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringmustard",true))()
 end
 
-function Extinguishers()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringextinguisher",true))()
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function Potions()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringpotions",true))()
 end
 
 
+function Extinguishers()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringextinguisher",true))()
+end
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function antiAFK()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/NOT%20MY%20SCRIPT%20TOO",true))()
+end
 
 
 function Rats()
@@ -482,6 +394,14 @@ farmTab:AddButton({
 		autoMoney()
   	end    
 })
+
+farmTab:AddButton({
+	Name = "Anti Afk (NOT MY SCRIPT)",
+	Callback = function()
+		antiAFK()
+  	end    
+})
+
 
 
 teleportTab:AddButton({
