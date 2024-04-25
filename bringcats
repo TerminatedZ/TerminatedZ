@@ -1,3 +1,6 @@
+		local args = {
+    	[1] = workspace.Entities.Characters.Creatures.Cats.Cat
+	}
 
 
 
