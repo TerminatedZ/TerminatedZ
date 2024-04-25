@@ -325,7 +325,7 @@ function ratSoap()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratsoap",true))()
 end
 
-function ratSquirrel
+function ratSquirrel()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/bringratsquirrel",true))()
 end
 
