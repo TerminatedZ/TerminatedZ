@@ -2,9 +2,19 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Cook Burgers", HidePremium = false, SaveConfig = true, ConfigFolder = "CookBurgers"})
 
 
+local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
 
 
 
+-- Values
+_G.safeSpot = true
+
+
+function safeSpot()
+	while _G.safeSpot == true do
+		player.CFrame = CFrame.new(-17, 67, -246)
+	end
+end
 
 
 
@@ -401,6 +411,14 @@ farmTab:AddButton({
 		antiAFK()
   	end    
 })
+
+farmTab:AddButton({
+	Name = "AFK Place",
+	Callback = function()
+		antiAFK()
+  	end    
+})
+
 
 
 
