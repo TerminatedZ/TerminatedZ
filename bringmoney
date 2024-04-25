@@ -1,0 +1,22 @@
+local function collectAllMoney() -- Descriptive function name
+  local collectedMoney = 0 -- Counter to track collected money
+  local moneyLocation = game.Workspace.Entities.Items  -- Target location for Money parts
+
+  -- Loop through all children of the Money location (assuming they are parts)
+  for _, part in ipairs(moneyLocation:GetChildren()) do
+    -- Check if it's a valid part named "Money"
+    if part:IsA("BasePart") and part.Name == "Money" then
+      part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 1, 0) -- Teleport with offset
+      collectedMoney = collectedMoney + 1
+    end
+  end
+
+  if collectedMoney > 0 then
+    print("Collected", collectedMoney, "Money!") -- Print collected amount
+  else
+    print("No Money found!")
+  end
+end
+
+-- Call the function (replace with your desired trigger event)
+collectAllMoney()  -- Uncomment to run the script automatically
