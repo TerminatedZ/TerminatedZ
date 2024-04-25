@@ -1,3 +1,8 @@
+		local args = {
+    	[1] = workspace.Entities.Items.Money
+	}
+
+
 local function collectAllMoney() -- Descriptive function name
   local collectedMoney = 0 -- Counter to track collected money
   local moneyLocation = game.Workspace.Entities.Items  -- Target location for Money parts
@@ -7,6 +12,7 @@ local function collectAllMoney() -- Descriptive function name
     -- Check if it's a valid part named "Money"
     if part:IsA("BasePart") and part.Name == "Money" then
       part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 1, 0) -- Teleport with offset
+      game:GetService("ReplicatedStorage").Systems.NetworkOwnershipsSystem.Network3:InvokeServer(unpack(args))
       collectedMoney = collectedMoney + 1
     end
   end
