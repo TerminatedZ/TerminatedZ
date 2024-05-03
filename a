@@ -79,6 +79,7 @@ MainUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainUI.BorderSizePixel = 0
 MainUI.Position = UDim2.new(0.174208149, 0, 0.181609392, 0)
 MainUI.Size = UDim2.new(0, 576, 0, 378)
+MainUI.Draggable = true
 
 UICorner.CornerRadius = UDim.new(0, 20)
 UICorner.Parent = MainUI
@@ -559,7 +560,7 @@ UICorner_23.Parent = Tabs
 
 -- Scripts:
 
-local function OAOJTL_fake_script() -- ImageLabel_2.LocalScript 
+local function HMHBR_fake_script() -- ImageLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel_2)
 
 	local Players = game:GetService("Players")
@@ -577,8 +578,8 @@ local function OAOJTL_fake_script() -- ImageLabel_2.LocalScript
 	imageLabel.Image = content
 	imageLabel.Size = UDim2.new(0, 78, 0, 78)
 end
-coroutine.wrap(OAOJTL_fake_script)()
-local function ZTVJW_fake_script() -- username.LocalScript 
+coroutine.wrap(HMHBR_fake_script)()
+local function WSLYJ_fake_script() -- username.LocalScript 
 	local script = Instance.new('LocalScript', username)
 
 	local Players = game:GetService("Players")
@@ -593,8 +594,8 @@ local function ZTVJW_fake_script() -- username.LocalScript
 		text.Text = player.DisplayName
 	end
 end
-coroutine.wrap(ZTVJW_fake_script)()
-local function NKMD_fake_script() -- Execute.LocalScript 
+coroutine.wrap(WSLYJ_fake_script)()
+local function ULRBZYK_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -604,8 +605,8 @@ local function NKMD_fake_script() -- Execute.LocalScript
 		print("(Affinity X) Script Executed!")
 	end)
 end
-coroutine.wrap(NKMD_fake_script)()
-local function GHPO_fake_script() -- Clear.LocalScript 
+coroutine.wrap(ULRBZYK_fake_script)()
+local function TFLLTR_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local clearbtn = script.Parent
@@ -616,8 +617,8 @@ local function GHPO_fake_script() -- Clear.LocalScript
 	end)
 	
 end
-coroutine.wrap(GHPO_fake_script)()
-local function DTTFBN_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(TFLLTR_fake_script)()
+local function FKLCC_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.ClearTextOnFocus = false
@@ -626,8 +627,8 @@ local function DTTFBN_fake_script() -- TextBox.LocalScript
 	
 	myTextBox.Changed:Connect(function() myTextBox.Text = myTextBox.Text:sub(1,10) end)
 end
-coroutine.wrap(DTTFBN_fake_script)()
-local function XJQAP_fake_script() -- InfYield.LocalScript 
+coroutine.wrap(FKLCC_fake_script)()
+local function DQCHP_fake_script() -- InfYield.LocalScript 
 	local script = Instance.new('LocalScript', InfYield)
 
 	local infyieldbutton = script.Parent
@@ -636,8 +637,8 @@ local function XJQAP_fake_script() -- InfYield.LocalScript
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(XJQAP_fake_script)()
-local function UMVJYF_fake_script() -- FatesESP.LocalScript 
+coroutine.wrap(DQCHP_fake_script)()
+local function WTUKYB_fake_script() -- FatesESP.LocalScript 
 	local script = Instance.new('LocalScript', FatesESP)
 
 	local fatesespbutton = script.Parent
@@ -646,8 +647,8 @@ local function UMVJYF_fake_script() -- FatesESP.LocalScript
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua'))()
 	end)
 end
-coroutine.wrap(UMVJYF_fake_script)()
-local function GDUDZ_fake_script() -- Aimbot.LocalScript 
+coroutine.wrap(WTUKYB_fake_script)()
+local function LLUAAB_fake_script() -- Aimbot.LocalScript 
 	local script = Instance.new('LocalScript', Aimbot)
 
 	local aimbotbutton = script.Parent
@@ -656,8 +657,8 @@ local function GDUDZ_fake_script() -- Aimbot.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/aimbotarceusx",true))()
 	end)
 end
-coroutine.wrap(GDUDZ_fake_script)()
-local function HHOV_fake_script() -- Fly.LocalScript 
+coroutine.wrap(LLUAAB_fake_script)()
+local function BSZIIB_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	local Flybtn = script.Parent
@@ -666,8 +667,8 @@ local function HHOV_fake_script() -- Fly.LocalScript
 		loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
 	end)
 end
-coroutine.wrap(HHOV_fake_script)()
-local function ZRQDMI_fake_script() -- Keyboard.LocalScript 
+coroutine.wrap(BSZIIB_fake_script)()
+local function TYAOA_fake_script() -- Keyboard.LocalScript 
 	local script = Instance.new('LocalScript', Keyboard)
 
 	local Flybtn = script.Parent
@@ -676,4 +677,12 @@ local function ZRQDMI_fake_script() -- Keyboard.LocalScript
 		loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
 	end)
 end
-coroutine.wrap(ZRQDMI_fake_script)()
+coroutine.wrap(TYAOA_fake_script)()
+local function QDUVKAQ_fake_script() -- MainUI.LocalScript 
+	local script = Instance.new('LocalScript', MainUI)
+
+	local MainUI = script.Parent
+	
+	MainUI.Draggable = true
+end
+coroutine.wrap(QDUVKAQ_fake_script)()
