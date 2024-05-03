@@ -1,0 +1,679 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local AffinityMainGUI = Instance.new("ScreenGui")
+local MainUI = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Text = Instance.new("TextLabel")
+local Tab = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Text_2 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local TabsList = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local HomeTab = Instance.new("Frame")
+local UserBack = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local User = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local welcome = Instance.new("TextLabel")
+local username = Instance.new("TextLabel")
+local QExecF = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local QExecB = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local QExec = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local Execute = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextBox = Instance.new("TextBox")
+local UICorner_12 = Instance.new("UICorner")
+local QuickExecT = Instance.new("TextLabel")
+local nonexistentkey = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local nonexistentkeyback = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local quickscripthubback = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local quickscripthub = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local InfYield = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local FatesESP = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local Aimbot = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local Fly = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local Keyboard = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local ExitButtons = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local Text_3 = Instance.new("TextLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local Tabs = Instance.new("Frame")
+local UICorner_23 = Instance.new("UICorner")
+
+--Properties:
+
+AffinityMainGUI.Name = "AffinityMainGUI"
+AffinityMainGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AffinityMainGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainUI.Name = "MainUI"
+MainUI.Parent = AffinityMainGUI
+MainUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainUI.BackgroundTransparency = 0.500
+MainUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainUI.BorderSizePixel = 0
+MainUI.Position = UDim2.new(0.174208149, 0, 0.181609392, 0)
+MainUI.Size = UDim2.new(0, 576, 0, 378)
+
+UICorner.CornerRadius = UDim.new(0, 20)
+UICorner.Parent = MainUI
+
+Title.Name = "Title"
+Title.Parent = MainUI
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.BackgroundTransparency = 0.500
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.0220053494, 0, 0.0329679586, 0)
+Title.Size = UDim2.new(0, 190, 0, 63)
+
+UICorner_2.CornerRadius = UDim.new(0, 20)
+UICorner_2.Parent = Title
+
+Text.Name = "Text"
+Text.Parent = Title
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Text.BorderSizePixel = 0
+Text.Position = UDim2.new(0.163157895, 0, 0.301587313, 0)
+Text.Size = UDim2.new(0, 127, 0, 24)
+Text.Font = Enum.Font.FredokaOne
+Text.Text = "Affinity X"
+Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text.TextSize = 23.000
+Text.TextWrapped = true
+
+Tab.Name = "Tab"
+Tab.Parent = MainUI
+Tab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Tab.BackgroundTransparency = 0.500
+Tab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab.BorderSizePixel = 0
+Tab.Position = UDim2.new(0.37790817, 0, 0.0329679623, 0)
+Tab.Size = UDim2.new(0, 240, 0, 63)
+
+UICorner_3.CornerRadius = UDim.new(0, 20)
+UICorner_3.Parent = Tab
+
+Text_2.Name = "Text"
+Text_2.Parent = Tab
+Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_2.BackgroundTransparency = 1.000
+Text_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Text_2.BorderSizePixel = 0
+Text_2.Position = UDim2.new(0.138157904, 0, 0.126984134, 0)
+Text_2.Size = UDim2.new(0, 100, 0, 24)
+Text_2.Font = Enum.Font.FredokaOne
+Text_2.Text = "Home"
+Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_2.TextSize = 23.000
+Text_2.TextWrapped = true
+
+ImageLabel.Parent = Tab
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0250000004, 0, 0.111111231, 0)
+ImageLabel.Size = UDim2.new(0, 49, 0, 46)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=17366170919"
+
+TabsList.Name = "TabsList"
+TabsList.Parent = MainUI
+TabsList.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TabsList.BackgroundTransparency = 0.500
+TabsList.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabsList.BorderSizePixel = 0
+TabsList.Position = UDim2.new(0.0364729837, 0, 0.282815039, 0)
+TabsList.Size = UDim2.new(0, 53, 0, 251)
+
+UICorner_4.CornerRadius = UDim.new(0, 20)
+UICorner_4.Parent = TabsList
+
+ImageButton.Parent = TabsList
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.113207258, 0, 0.208888888, 0)
+ImageButton.Size = UDim2.new(0, 41, 0, 39)
+ImageButton.Image = "http://www.roblox.com/asset/?id=17366170919"
+
+HomeTab.Name = "HomeTab"
+HomeTab.Parent = MainUI
+HomeTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HomeTab.BackgroundTransparency = 1.000
+HomeTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HomeTab.BorderSizePixel = 0
+HomeTab.Position = UDim2.new(0.159722224, 0, 0.199634567, 0)
+HomeTab.Size = UDim2.new(0, 476, 0, 289)
+
+UserBack.Name = "UserBack"
+UserBack.Parent = HomeTab
+UserBack.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+UserBack.BackgroundTransparency = 0.800
+UserBack.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UserBack.BorderSizePixel = 0
+UserBack.Position = UDim2.new(0.021008404, 0, 0.0711111128, 0)
+UserBack.Size = UDim2.new(0, 235, 0, 100)
+
+UICorner_5.CornerRadius = UDim.new(0, 20)
+UICorner_5.Parent = UserBack
+
+User.Name = "User"
+User.Parent = HomeTab
+User.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+User.BackgroundTransparency = 0.500
+User.BorderColor3 = Color3.fromRGB(0, 0, 0)
+User.BorderSizePixel = 0
+User.Position = UDim2.new(0.0357142873, 0, 0.0977777764, 0)
+User.Size = UDim2.new(0, 222, 0, 88)
+
+UICorner_6.CornerRadius = UDim.new(0, 20)
+UICorner_6.Parent = User
+
+ImageLabel_2.Parent = User
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0.0360360369, 0, 0.0568181835, 0)
+ImageLabel_2.Size = UDim2.new(0, 78, 0, 78)
+ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+welcome.Name = "welcome"
+welcome.Parent = User
+welcome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+welcome.BackgroundTransparency = 1.000
+welcome.BorderColor3 = Color3.fromRGB(0, 0, 0)
+welcome.BorderSizePixel = 0
+welcome.Position = UDim2.new(0.383878559, 0, 0.051586844, 0)
+welcome.Size = UDim2.new(0, 78, 0, 20)
+welcome.Font = Enum.Font.FredokaOne
+welcome.Text = "Welcome,"
+welcome.TextColor3 = Color3.fromRGB(0, 170, 255)
+welcome.TextScaled = true
+welcome.TextSize = 23.000
+welcome.TextWrapped = true
+
+username.Name = "username"
+username.Parent = User
+username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+username.BackgroundTransparency = 1.000
+username.BorderColor3 = Color3.fromRGB(0, 0, 0)
+username.BorderSizePixel = 0
+username.Position = UDim2.new(0.383878559, 0, 0.358405024, 0)
+username.Size = UDim2.new(0, 136, 0, 32)
+username.Font = Enum.Font.FredokaOne
+username.Text = "Failed to find Username or Displayname"
+username.TextColor3 = Color3.fromRGB(255, 255, 255)
+username.TextScaled = true
+username.TextSize = 23.000
+username.TextWrapped = true
+
+QExecF.Name = "QExecF"
+QExecF.Parent = HomeTab
+QExecF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+QExecF.BackgroundTransparency = 0.500
+QExecF.BorderColor3 = Color3.fromRGB(0, 0, 0)
+QExecF.BorderSizePixel = 0
+QExecF.Position = UDim2.new(0.547005296, 0, 0.0977778435, 0)
+QExecF.Size = UDim2.new(0, 202, 0, 254)
+
+UICorner_7.CornerRadius = UDim.new(0, 20)
+UICorner_7.Parent = QExecF
+
+QExecB.Name = "QExecB"
+QExecB.Parent = HomeTab
+QExecB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+QExecB.BackgroundTransparency = 0.800
+QExecB.BorderColor3 = Color3.fromRGB(0, 0, 0)
+QExecB.BorderSizePixel = 0
+QExecB.Position = UDim2.new(0.533613443, 0, 0.0711111873, 0)
+QExecB.Size = UDim2.new(0, 214, 0, 268)
+
+UICorner_8.CornerRadius = UDim.new(0, 20)
+UICorner_8.Parent = QExecB
+
+QExec.Name = "QExec"
+QExec.Parent = HomeTab
+QExec.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+QExec.BackgroundTransparency = 0.500
+QExec.BorderColor3 = Color3.fromRGB(0, 0, 0)
+QExec.BorderSizePixel = 0
+QExec.Position = UDim2.new(0.565912843, 0, 0.139300182, 0)
+QExec.Size = UDim2.new(0, 187, 0, 234)
+
+UICorner_9.CornerRadius = UDim.new(0, 20)
+UICorner_9.Parent = QExec
+
+Execute.Name = "Execute"
+Execute.Parent = QExec
+Execute.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.0909090936, 0, 0.870774388, 0)
+Execute.Size = UDim2.new(0, 79, 0, 23)
+Execute.Font = Enum.Font.FredokaOne
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextSize = 20.000
+Execute.TextWrapped = true
+
+UICorner_10.CornerRadius = UDim.new(0, 20)
+UICorner_10.Parent = Execute
+
+Clear.Name = "Clear"
+Clear.Parent = QExec
+Clear.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.56684494, 0, 0.870774388, 0)
+Clear.Size = UDim2.new(0, 71, 0, 23)
+Clear.Font = Enum.Font.FredokaOne
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextSize = 20.000
+Clear.TextWrapped = true
+
+UICorner_11.CornerRadius = UDim.new(0, 20)
+UICorner_11.Parent = Clear
+
+ScrollingFrame.Parent = QExec
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0909090936, 0, 0.051282052, 0)
+ScrollingFrame.Size = UDim2.new(0, 160, 0, 180)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 3150)
+
+TextBox.Parent = ScrollingFrame
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BackgroundTransparency = 1.000
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.055555556, 0, 0.0298507456, 0)
+TextBox.Size = UDim2.new(0, 167, 0, 999999999)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Enter Text Here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 20.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_12.CornerRadius = UDim.new(0, 20)
+UICorner_12.Parent = TextBox
+
+QuickExecT.Name = "QuickExecT"
+QuickExecT.Parent = QExec
+QuickExecT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+QuickExecT.BackgroundTransparency = 1.000
+QuickExecT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+QuickExecT.BorderSizePixel = 0
+QuickExecT.Position = UDim2.new(0.0567225479, 0, -0.0718214884, 0)
+QuickExecT.Size = UDim2.new(0, 164, 0, 20)
+QuickExecT.Font = Enum.Font.FredokaOne
+QuickExecT.Text = "Quick Executor"
+QuickExecT.TextColor3 = Color3.fromRGB(255, 255, 255)
+QuickExecT.TextScaled = true
+QuickExecT.TextSize = 14.000
+QuickExecT.TextWrapped = true
+
+nonexistentkey.Name = "nonexistentkey"
+nonexistentkey.Parent = HomeTab
+nonexistentkey.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+nonexistentkey.BackgroundTransparency = 0.500
+nonexistentkey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nonexistentkey.BorderSizePixel = 0
+nonexistentkey.Position = UDim2.new(0.0357142873, 0, 0.471213579, 0)
+nonexistentkey.Size = UDim2.new(0, 222, 0, 87)
+
+UICorner_13.CornerRadius = UDim.new(0, 20)
+UICorner_13.Parent = nonexistentkey
+
+nonexistentkeyback.Name = "nonexistentkeyback"
+nonexistentkeyback.Parent = HomeTab
+nonexistentkeyback.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+nonexistentkeyback.BackgroundTransparency = 0.800
+nonexistentkeyback.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nonexistentkeyback.BorderSizePixel = 0
+nonexistentkeyback.Position = UDim2.new(0.021008404, 0, 0.44481355, 0)
+nonexistentkeyback.Size = UDim2.new(0, 235, 0, 99)
+
+UICorner_14.CornerRadius = UDim.new(0, 20)
+UICorner_14.Parent = nonexistentkeyback
+
+TextLabel.Parent = nonexistentkeyback
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0723404288, 0, 0.141414136, 0)
+TextLabel.Size = UDim2.new(0, 153, 0, 29)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "Key System Status"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = nonexistentkeyback
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0723404288, 0, 0.434343427, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 42)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "what do you mean key? this exploit is private"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+quickscripthubback.Name = "quickscripthubback"
+quickscripthubback.Parent = HomeTab
+quickscripthubback.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+quickscripthubback.BackgroundTransparency = 0.800
+quickscripthubback.BorderColor3 = Color3.fromRGB(0, 0, 0)
+quickscripthubback.BorderSizePixel = 0
+quickscripthubback.Position = UDim2.new(0.021008404, 0, 0.821976185, 0)
+quickscripthubback.Size = UDim2.new(0, 235, 0, 49)
+
+UICorner_15.CornerRadius = UDim.new(0, 20)
+UICorner_15.Parent = quickscripthubback
+
+quickscripthub.Name = "quickscripthub"
+quickscripthub.Parent = HomeTab
+quickscripthub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+quickscripthub.BackgroundTransparency = 0.500
+quickscripthub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+quickscripthub.BorderSizePixel = 0
+quickscripthub.Position = UDim2.new(0.0357142873, 0, 0.835309505, 0)
+quickscripthub.Size = UDim2.new(0, 222, 0, 43)
+
+UICorner_16.CornerRadius = UDim.new(0, 20)
+UICorner_16.Parent = quickscripthub
+
+InfYield.Name = "InfYield"
+InfYield.Parent = quickscripthub
+InfYield.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+InfYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfYield.BorderSizePixel = 0
+InfYield.Position = UDim2.new(0.0855855867, 0, 0.130569816, 0)
+InfYield.Size = UDim2.new(0, 31, 0, 31)
+InfYield.Font = Enum.Font.FredokaOne
+InfYield.Text = "Infinite Yield"
+InfYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfYield.TextScaled = true
+InfYield.TextSize = 14.000
+InfYield.TextWrapped = true
+
+UICorner_17.CornerRadius = UDim.new(0, 17)
+UICorner_17.Parent = InfYield
+
+FatesESP.Name = "FatesESP"
+FatesESP.Parent = quickscripthub
+FatesESP.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+FatesESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FatesESP.BorderSizePixel = 0
+FatesESP.Position = UDim2.new(0.279279292, 0, 0.130569816, 0)
+FatesESP.Size = UDim2.new(0, 31, 0, 31)
+FatesESP.Font = Enum.Font.FredokaOne
+FatesESP.Text = "Fates ESP"
+FatesESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+FatesESP.TextScaled = true
+FatesESP.TextSize = 14.000
+FatesESP.TextWrapped = true
+
+UICorner_18.CornerRadius = UDim.new(0, 17)
+UICorner_18.Parent = FatesESP
+
+Aimbot.Name = "Aimbot"
+Aimbot.Parent = quickscripthub
+Aimbot.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+Aimbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Aimbot.BorderSizePixel = 0
+Aimbot.Position = UDim2.new(0.459459454, 0, 0.130569816, 0)
+Aimbot.Size = UDim2.new(0, 31, 0, 31)
+Aimbot.Font = Enum.Font.FredokaOne
+Aimbot.Text = "Aimbot"
+Aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+Aimbot.TextScaled = true
+Aimbot.TextSize = 14.000
+Aimbot.TextWrapped = true
+
+UICorner_19.CornerRadius = UDim.new(0, 17)
+UICorner_19.Parent = Aimbot
+
+Fly.Name = "Fly"
+Fly.Parent = quickscripthub
+Fly.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.635135114, 0, 0.107313998, 0)
+Fly.Size = UDim2.new(0, 31, 0, 31)
+Fly.Font = Enum.Font.FredokaOne
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
+
+UICorner_20.CornerRadius = UDim.new(0, 17)
+UICorner_20.Parent = Fly
+
+Keyboard.Name = "Keyboard"
+Keyboard.Parent = quickscripthub
+Keyboard.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+Keyboard.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Keyboard.BorderSizePixel = 0
+Keyboard.Position = UDim2.new(0.806306303, 0, 0.130569816, 0)
+Keyboard.Size = UDim2.new(0, 31, 0, 31)
+Keyboard.Font = Enum.Font.FredokaOne
+Keyboard.Text = "Keyboard"
+Keyboard.TextColor3 = Color3.fromRGB(255, 255, 255)
+Keyboard.TextScaled = true
+Keyboard.TextSize = 14.000
+Keyboard.TextWrapped = true
+
+UICorner_21.CornerRadius = UDim.new(0, 17)
+UICorner_21.Parent = Keyboard
+
+ExitButtons.Name = "ExitButtons"
+ExitButtons.Parent = MainUI
+ExitButtons.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExitButtons.BackgroundTransparency = 0.500
+ExitButtons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExitButtons.BorderSizePixel = 0
+ExitButtons.Position = UDim2.new(0.811935663, 0, 0.0329679623, 0)
+ExitButtons.Size = UDim2.new(0, 101, 0, 63)
+
+UICorner_22.CornerRadius = UDim.new(0, 20)
+UICorner_22.Parent = ExitButtons
+
+Text_3.Name = "Text"
+Text_3.Parent = ExitButtons
+Text_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_3.BackgroundTransparency = 1.000
+Text_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Text_3.BorderSizePixel = 0
+Text_3.Position = UDim2.new(0.138157904, 0, 0.126984134, 0)
+Text_3.Size = UDim2.new(0, 100, 0, 24)
+Text_3.Font = Enum.Font.FredokaOne
+Text_3.Text = "Home"
+Text_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_3.TextSize = 23.000
+Text_3.TextWrapped = true
+
+ImageLabel_3.Parent = ExitButtons
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.BackgroundTransparency = 1.000
+ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Position = UDim2.new(0.0250000004, 0, 0.111111231, 0)
+ImageLabel_3.Size = UDim2.new(0, 49, 0, 46)
+ImageLabel_3.Image = "http://www.roblox.com/asset/?id=17366170919"
+
+Tabs.Name = "Tabs"
+Tabs.Parent = MainUI
+Tabs.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Tabs.BackgroundTransparency = 0.800
+Tabs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tabs.BorderSizePixel = 0
+Tabs.Position = UDim2.new(0.0202692878, 0, 0.263056517, 0)
+Tabs.Size = UDim2.new(0, 70, 0, 264)
+
+UICorner_23.CornerRadius = UDim.new(0, 20)
+UICorner_23.Parent = Tabs
+
+-- Scripts:
+
+local function OAOJTL_fake_script() -- ImageLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel_2)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	-- Fetch the thumbnail
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	-- Set the ImageLabel's content to the user thumbnail
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+	imageLabel.Size = UDim2.new(0, 78, 0, 78)
+end
+coroutine.wrap(OAOJTL_fake_script)()
+local function ZTVJW_fake_script() -- username.LocalScript 
+	local script = Instance.new('LocalScript', username)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local text = script.Parent
+	
+	if player.DisplayName == "" then
+		text.Text = player.Name
+	else
+		text.Text = player.DisplayName
+	end
+end
+coroutine.wrap(ZTVJW_fake_script)()
+local function NKMD_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.ScrollingFrame.TextBox
+	button.MouseButton1Click:Connect(function()
+		loadstring(textbox.Text)()
+		print("(Affinity X) Script Executed!")
+	end)
+end
+coroutine.wrap(NKMD_fake_script)()
+local function GHPO_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
+
+	local clearbtn = script.Parent
+	local textbox2 = script.Parent.Parent.ScrollingFrame.TextBox
+	
+	clearbtn.MouseButton1Click:Connect(function()
+		textbox2.Text = ""
+	end)
+	
+end
+coroutine.wrap(GHPO_fake_script)()
+local function DTTFBN_fake_script() -- TextBox.LocalScript 
+	local script = Instance.new('LocalScript', TextBox)
+
+	script.Parent.ClearTextOnFocus = false
+	script.Parent.TextBounds = Vector2.new("9999999, 9999999, 9999999")
+	local myTextBox = script.Parent
+	
+	myTextBox.Changed:Connect(function() myTextBox.Text = myTextBox.Text:sub(1,10) end)
+end
+coroutine.wrap(DTTFBN_fake_script)()
+local function XJQAP_fake_script() -- InfYield.LocalScript 
+	local script = Instance.new('LocalScript', InfYield)
+
+	local infyieldbutton = script.Parent
+	
+	infyieldbutton.MouseButton1Click(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end)
+end
+coroutine.wrap(XJQAP_fake_script)()
+local function UMVJYF_fake_script() -- FatesESP.LocalScript 
+	local script = Instance.new('LocalScript', FatesESP)
+
+	local fatesespbutton = script.Parent
+	
+	fatesespbutton.MouseButton1Click(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua'))()
+	end)
+end
+coroutine.wrap(UMVJYF_fake_script)()
+local function GDUDZ_fake_script() -- Aimbot.LocalScript 
+	local script = Instance.new('LocalScript', Aimbot)
+
+	local aimbotbutton = script.Parent
+	
+	aimbotbutton.MouseButton1Click(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/TerminatedZ/TerminatedZ/main/aimbotarceusx",true))()
+	end)
+end
+coroutine.wrap(GDUDZ_fake_script)()
+local function HHOV_fake_script() -- Fly.LocalScript 
+	local script = Instance.new('LocalScript', Fly)
+
+	local Flybtn = script.Parent
+	
+	Flybtn.MouseButton1Click(function()
+		loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+	end)
+end
+coroutine.wrap(HHOV_fake_script)()
+local function ZRQDMI_fake_script() -- Keyboard.LocalScript 
+	local script = Instance.new('LocalScript', Keyboard)
+
+	local Flybtn = script.Parent
+	
+	Flybtn.MouseButton1Click(function()
+		loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+	end)
+end
+coroutine.wrap(ZRQDMI_fake_script)()
