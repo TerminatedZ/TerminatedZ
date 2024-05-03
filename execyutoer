@@ -59,17 +59,17 @@ clearf.TextSize = 14.000
 
 -- Scripts:
 
-local function IIJQNK_fake_script() -- EXECUTETHEGOSHDARNSCRIPT.LocalScript 
+local function QNXGSN_fake_script() -- EXECUTETHEGOSHDARNSCRIPT.LocalScript 
 	local script = Instance.new('LocalScript', EXECUTETHEGOSHDARNSCRIPT)
 
 	local button = script.Parent
 	local textbox = script.Parent.Parent.red
 	button.MouseButton1Down:Connect(function()
-		loadstring(textbox.Text)
+		loadstring(textbox.Text)()
 	end)
 end
-coroutine.wrap(IIJQNK_fake_script)()
-local function GTSBWV_fake_script() -- clearf.LocalScript 
+coroutine.wrap(QNXGSN_fake_script)()
+local function EXWPYY_fake_script() -- clearf.LocalScript 
 	local script = Instance.new('LocalScript', clearf)
 
 	local clear = script.Parent
@@ -79,11 +79,11 @@ local function GTSBWV_fake_script() -- clearf.LocalScript
 		textbox2.Text = ""
 	end)
 end
-coroutine.wrap(GTSBWV_fake_script)()
-local function ZUFTXUC_fake_script() -- Frame.LocalScript 
+coroutine.wrap(EXWPYY_fake_script)()
+local function UTJWEM_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(ZUFTXUC_fake_script)()
+coroutine.wrap(UTJWEM_fake_script)()
