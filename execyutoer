@@ -1,0 +1,89 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local red = Instance.new("TextBox")
+local EXECUTETHEGOSHDARNSCRIPT = Instance.new("TextButton")
+local clearf = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0, 221, 0, 112)
+Frame.Size = UDim2.new(0, 441, 0, 217)
+
+red.Name = "red"
+red.Parent = Frame
+red.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+red.BorderColor3 = Color3.fromRGB(0, 0, 0)
+red.BorderSizePixel = 0
+red.Position = UDim2.new(0.274376422, 0, 0.382488489, 0)
+red.Size = UDim2.new(0, 200, 0, 50)
+red.Font = Enum.Font.SourceSans
+red.Text = ""
+red.TextColor3 = Color3.fromRGB(0, 0, 0)
+red.TextSize = 14.000
+
+EXECUTETHEGOSHDARNSCRIPT.Name = "EXECUTETHEGOSHDARNSCRIPT"
+EXECUTETHEGOSHDARNSCRIPT.Parent = Frame
+EXECUTETHEGOSHDARNSCRIPT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EXECUTETHEGOSHDARNSCRIPT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EXECUTETHEGOSHDARNSCRIPT.BorderSizePixel = 0
+EXECUTETHEGOSHDARNSCRIPT.Position = UDim2.new(0, 0, 0.769585252, 0)
+EXECUTETHEGOSHDARNSCRIPT.Size = UDim2.new(0, 200, 0, 50)
+EXECUTETHEGOSHDARNSCRIPT.Font = Enum.Font.SourceSans
+EXECUTETHEGOSHDARNSCRIPT.Text = "execute"
+EXECUTETHEGOSHDARNSCRIPT.TextColor3 = Color3.fromRGB(0, 0, 0)
+EXECUTETHEGOSHDARNSCRIPT.TextSize = 14.000
+
+clearf.Name = "clearf"
+clearf.Parent = Frame
+clearf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clearf.BorderColor3 = Color3.fromRGB(0, 0, 0)
+clearf.BorderSizePixel = 0
+clearf.Position = UDim2.new(0.453514725, 0, 0.769585252, 0)
+clearf.Size = UDim2.new(0, 200, 0, 50)
+clearf.Font = Enum.Font.SourceSans
+clearf.Text = "clelar"
+clearf.TextColor3 = Color3.fromRGB(0, 0, 0)
+clearf.TextSize = 14.000
+
+-- Scripts:
+
+local function IIJQNK_fake_script() -- EXECUTETHEGOSHDARNSCRIPT.LocalScript 
+	local script = Instance.new('LocalScript', EXECUTETHEGOSHDARNSCRIPT)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.red
+	button.MouseButton1Down:Connect(function()
+		loadstring(textbox.Text)
+	end)
+end
+coroutine.wrap(IIJQNK_fake_script)()
+local function GTSBWV_fake_script() -- clearf.LocalScript 
+	local script = Instance.new('LocalScript', clearf)
+
+	local clear = script.Parent
+	local textbox2 = script.Parent.Parent.red
+	
+	clear.MouseButton1Click:Connect(function()
+		textbox2.Text = ""
+	end)
+end
+coroutine.wrap(GTSBWV_fake_script)()
+local function ZUFTXUC_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+end
+coroutine.wrap(ZUFTXUC_fake_script)()
